@@ -7,125 +7,192 @@
 <meta name="description" content="Red Argentina de Investigadores en Diversidades y Disidencias Sexogenéricas.">
 <link rel="icon" href="isotipo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Archivo:ital,wght@0,400;0,500;0,700;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Unbounded:wght@800;900&family=Archivo:ital,wght@0,400;0,600;0,800;1,700&family=Archivo+Black&family=DM+Serif+Display:ital@0;1&family=Courier+Prime:wght@700&display=swap">
 <style>
 :root{
-  --papel:#f1f1f1; --crema:#fffaf3; --tinta:#141414;
+  --papel:#f2f1ee; --crema:#fffaf3; --tinta:#141414;
   --violeta:#a63981; --violeta-osc:#6d1f56; --violeta-cla:#c35aa1;
-  --verde:#65b73b;   --verde-osc:#3f7e23;   --verde-cla:#8dd36b;
-  --rosa:#f6679e;    --rosa-osc:#d83c78;    --rosa-cla:#ff97be;
+  --verde:#65b73b; --verde-osc:#3f7e23; --verde-cla:#8dd36b;
+  --rosa:#f6679e; --rosa-osc:#d83c78; --rosa-cla:#ff97be;
+  --amarillo:#f2e600;
+  --f-titulo:"Anton","Arial Narrow",Impact,sans-serif;
   --f-display:"Unbounded","Arial Black",system-ui,sans-serif;
   --f-texto:"Archivo","Helvetica Neue",Arial,sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --f-mono:"Courier Prime","Courier New",monospace;
   --ancho:1180px;
   color-scheme:light;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{background:var(--papel);color:var(--tinta);font-family:var(--f-texto);font-size:17px;line-height:1.55}
-.grano{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--f-texto);font-size:17px;line-height:1.55;position:relative}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:var(--papel) url("arrugado.jpg") center/cover no-repeat}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--violeta);outline-offset:3px}
+img{max-width:100%}
 .wrap{max-width:var(--ancho);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
-h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.08;margin:0}
+h1,h2,h3{text-wrap:balance;line-height:1;margin:0}
 p{margin:0}
-.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+.eyebrow{font-family:var(--f-mono);font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.titulo{font-family:var(--f-titulo);font-weight:400;text-transform:uppercase;color:var(--violeta);font-size:clamp(2.8rem,8vw,6rem);letter-spacing:.01em;line-height:.92}
+
+/* cinta de plástico */
+.cinta{position:absolute;width:110px;height:30px;background:linear-gradient(100deg,rgba(255,255,255,.6),rgba(225,232,238,.4) 40%,rgba(255,255,255,.65));box-shadow:0 1px 2px rgba(0,0,0,.12);z-index:3}
+.cinta::before,.cinta::after{content:"";position:absolute;top:0;bottom:0;width:6px;background:inherit;clip-path:polygon(0 0,100% 10%,0 25%,100% 40%,0 55%,100% 70%,0 85%,100% 100%)}
+.cinta::before{left:-5px}.cinta::after{right:-5px;transform:scaleX(-1)}
+
+/* letras recortadas */
+.collage{display:flex;flex-wrap:wrap;gap:.18em .22em;align-items:center;font-size:clamp(1.9rem,5.4vw,4.3rem);line-height:1}
+.collage span{display:inline-block;padding:.08em .22em .12em;box-shadow:2px 3px 0 rgba(20,20,20,.18)}
+.c1{background:var(--tinta);color:#fff;font-family:"Archivo Black",sans-serif;transform:rotate(-2deg)}
+.c2{background:var(--rosa);color:var(--tinta);font-family:"DM Serif Display",serif;font-style:italic;transform:rotate(1.5deg)}
+.c3{background:#fff;color:var(--violeta);font-family:var(--f-display);font-weight:900;transform:rotate(-1deg)}
+.c4{background:var(--verde-cla);color:var(--tinta);font-family:var(--f-mono);font-weight:700;transform:rotate(2deg)}
+.c5{background:var(--violeta);color:#fff;font-family:"Archivo Black",sans-serif;transform:rotate(-1.5deg)}
+.c6{background:var(--amarillo);color:var(--tinta);font-family:"DM Serif Display",serif;transform:rotate(1deg)}
+
+/* texto en franjas, como en las placas */
+.franja{font-size:clamp(1rem,1.6vw,1.12rem);line-height:1.85;max-width:44ch}
+.franja span{background:var(--violeta);color:#fff;padding:.18em .45em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.franja b{font-weight:800}
+.franja + .franja{margin-top:18px}
+
 /* cabecera */
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--papel) 94%,transparent);backdrop-filter:blur(6px);border-bottom:2px solid var(--tinta)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--papel) 90%,transparent);backdrop-filter:blur(6px);border-bottom:2px solid var(--tinta)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
 .top .logo img{height:34px;width:auto;display:block}
 nav.menu ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:wrap}
-nav.menu a{display:block;text-decoration:none;font-weight:500;font-size:.92rem;padding:.4em .75em;border-radius:999px}
+nav.menu a{display:block;text-decoration:none;font-weight:600;font-size:.92rem;padding:.4em .75em;border-radius:999px}
 nav.menu a:hover{background:var(--verde-cla)}
 .menu-mobile{display:none}
-@media (max-width:860px){
+@media (max-width:900px){
   nav.menu{display:none}
   .menu-mobile{display:block;position:relative}
-  .menu-mobile summary{list-style:none;cursor:pointer;font-family:var(--f-mono);font-size:.85rem;border:2px solid var(--tinta);padding:.35em .8em;border-radius:999px;background:var(--rosa-cla)}
+  .menu-mobile summary{list-style:none;cursor:pointer;font-family:var(--f-mono);font-weight:700;font-size:.85rem;border:2px solid var(--tinta);padding:.35em .8em;border-radius:999px;background:var(--rosa-cla)}
   .menu-mobile summary::-webkit-details-marker{display:none}
-  .menu-mobile ul{position:absolute;right:0;top:calc(100% + 8px);background:var(--crema);border:2px solid var(--tinta);border-radius:14px;list-style:none;margin:0;padding:8px;min-width:200px;box-shadow:5px 5px 0 var(--violeta)}
+  .menu-mobile ul{position:absolute;right:0;top:calc(100% + 8px);background:var(--crema);border:2px solid var(--tinta);border-radius:14px;list-style:none;margin:0;padding:8px;min-width:210px;box-shadow:5px 5px 0 var(--violeta)}
   .menu-mobile a{display:block;padding:.5em .7em;text-decoration:none}
 }
+
 /* hero */
-.hero{padding-block:clamp(44px,7vw,96px) clamp(48px,7vw,96px);position:relative;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
-.hero .eyebrow{color:var(--violeta-osc)}
-.hero h1{margin-top:18px;font-size:clamp(2rem,4.6vw,3.7rem);font-weight:900;letter-spacing:-.02em}
-.hero h1 em{font-style:normal;color:var(--violeta);text-shadow:3px 2px 0 var(--rosa-cla)}
-.hero h1 b{font-weight:900;color:var(--verde-osc);text-shadow:3px 2px 0 var(--verde-cla)}
-.hero .bajada{margin-top:20px;max-width:50ch;font-size:1.1rem}
+.hero{position:relative;padding-block:clamp(40px,6vw,80px) clamp(40px,6vw,70px);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center}
+.hero .eyebrow{color:var(--violeta-osc);display:block;margin-bottom:22px;max-width:46ch}
+.hero .bajada{margin-top:26px;max-width:46ch;font-size:1.1rem}
 .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--f-display);font-weight:700;font-size:.85rem;text-decoration:none;padding:.9em 1.3em;border:2px solid var(--tinta);border-radius:999px;background:var(--violeta);color:#fff;box-shadow:4px 4px 0 var(--tinta);transition:transform .15s,box-shadow .15s;cursor:pointer}
+.btn{display:inline-flex;align-items:center;font-family:var(--f-display);font-weight:800;font-size:.82rem;text-decoration:none;padding:.95em 1.3em;border:2px solid var(--tinta);border-radius:999px;background:var(--violeta);color:#fff;box-shadow:4px 4px 0 var(--tinta);transition:transform .15s,box-shadow .15s}
 .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--tinta)}
 .btn.alt{background:var(--verde-cla);color:var(--tinta)}
-.hero-art{position:relative;max-width:100%}
-.hero-art::before{content:"";position:absolute;inset:8% 4% 6% 10%;border-radius:50%;background:radial-gradient(circle at 35% 40%,var(--rosa-cla),transparent 62%),radial-gradient(circle at 70% 70%,var(--verde-cla),transparent 58%);filter:blur(10px);opacity:.75}
-.hero-art img{position:relative;width:100%;height:auto;display:block}
-@keyframes entra{from{transform:translateY(10px) rotate(-2deg)}to{transform:none}}
-.hero-art img{animation:entra .9s cubic-bezier(.2,.8,.2,1) both}
-/* ventanas (motivo de las piezas de la red) */
-.la-red{background:linear-gradient(115deg,#bfdfa7 0%,#c9e3b0 38%,#e3b8d6 62%,#d7a3cf 100%);padding-block:clamp(56px,8vw,100px)}
-.la-red .cab{display:grid;gap:10px;margin-bottom:clamp(28px,4vw,44px)}
-.la-red .cab h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:900}
-.ventanas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,48px);align-items:start}
-.ventana{position:relative;background:var(--crema);border:2.5px solid var(--tinta);border-radius:34px;box-shadow:12px -12px 0 -2.5px var(--crema),12px -12px 0 0 var(--tinta);min-width:0}
-.ventana .barra{display:flex;justify-content:flex-end;gap:12px;padding:14px 26px;border-bottom:2.5px solid var(--tinta)}
-.ventana .barra span{width:26px;height:26px;border:2px solid var(--tinta);border-radius:50%;display:grid;place-items:center;font-size:17px;line-height:1;font-weight:700}
-.ventana .barra span:first-child,.ventana .barra span:last-child{background:var(--rosa-cla)}
-.ventana .cuerpo{padding:clamp(22px,3vw,36px);display:grid;gap:16px}
-.ventana h3{font-size:1.5rem;font-weight:900;text-transform:uppercase;letter-spacing:.01em}
-.ventana p{font-size:1.08rem;max-width:58ch}
-@media (max-width:820px){.ventanas{grid-template-columns:minmax(0,1fr)}}
-/* actividades: ciclo */
+.escena{position:relative;aspect-ratio:1/0.82;max-width:100%}
+.escena .mancha{position:absolute;inset:4% 0 20% 6%;width:94%;height:76%}
+.escena .molinete{position:absolute;width:24%;top:0;right:4%;transform:rotate(12deg)}
+.escena .molinete.b{width:15%;top:auto;bottom:26%;left:0;right:auto;transform:rotate(-20deg)}
+.escena .gente{position:absolute;left:-2%;right:-2%;bottom:0;width:104%;max-width:none;height:auto;filter:drop-shadow(0 8px 14px rgba(0,0,0,.22))}
+.escena .sticker{position:absolute;left:6%;top:4%;width:clamp(96px,13vw,150px);background:#fff;padding:12px;border-radius:50%;aspect-ratio:1;display:grid;place-items:center;transform:rotate(-8deg);box-shadow:0 10px 20px -10px rgba(0,0,0,.4)}
+.escena .sticker img{width:100%;height:auto}
+.escena .lema{position:absolute;right:2%;top:42%;background:var(--verde);color:#fff;font-style:italic;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:clamp(.66rem,1.3vw,.88rem);padding:.55em 1.1em;border-radius:999px;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--tinta);z-index:2}
+@media (max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.escena{max-width:560px;justify-self:center;width:100%}}
+
+/* la red */
+.red{position:relative;overflow:hidden;isolation:isolate;padding-block:clamp(56px,8vw,100px);border-block:22px solid var(--violeta)}
+.red .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(36px,6vw,80px);align-items:start}
+.red .bloque{display:grid;gap:22px;position:relative}
+.red .bloque.b{margin-top:clamp(0px,8vw,120px)}
+.red .mancha{position:absolute;z-index:-1;width:62%;right:-10%;bottom:-18%;opacity:.55}
+.red .bloque.b .mancha{right:auto;left:-14%;bottom:auto;top:-8%}
+@media (max-width:820px){.red .grid{grid-template-columns:minmax(0,1fr)}.red .bloque.b{margin-top:0}}
+
+/* dónde estamos */
+.donde{overflow-x:clip;padding-block:clamp(56px,8vw,100px);position:relative}
+.donde .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:start;margin-top:clamp(24px,4vw,40px)}
+.mapa{position:sticky;top:90px;transform:rotate(-1.5deg);margin:0;background:#fff;padding:10px;box-shadow:0 14px 30px -14px rgba(0,0,0,.45)}
+.mapa img{display:block;width:100%;height:auto}
+.mapa .cinta{top:-12px;left:42%;transform:rotate(3deg)}
+.provincias{display:grid;gap:10px}
+.prov{background:var(--crema);border:2px solid var(--tinta);border-radius:16px}
+.prov summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:.75em 1em;font-family:var(--f-display);font-weight:800;font-size:1rem}
+.prov summary::-webkit-details-marker{display:none}
+.prov summary::after{content:"+";font-family:var(--f-mono);font-size:1.3rem;line-height:1;width:28px;height:28px;border:2px solid var(--tinta);border-radius:50%;display:grid;place-items:center;flex:none;background:var(--rosa-cla)}
+.prov[open] summary::after{content:"−";background:var(--verde-cla)}
+.prov .lista{padding:0 1.1em 1em;font-size:.95rem;display:grid;gap:6px}
+.prov .lista b{display:block;margin-top:4px}
+.prov ul{margin:2px 0 0;padding-left:1.2em}
+.prov li{margin:2px 0}
+.cierre{margin-top:26px}
+@media (max-width:820px){.donde .grid{grid-template-columns:minmax(0,1fr)}.mapa{position:relative;top:0;max-width:440px;justify-self:center}}
+
+/* congreso: collage de fotos */
+.congreso{position:relative;overflow:hidden;padding-block:clamp(56px,8vw,100px);background:var(--violeta);color:#fff}
+.congreso .titulo{color:#fff;font-size:clamp(2.4rem,6vw,4.6rem)}
+.congreso .sub{font-family:var(--f-mono);font-weight:700;margin-top:10px}
+.mural{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(10px,1.6vw,18px);margin-top:clamp(30px,5vw,56px)}
+.pol{position:relative;margin:0;background:#fff;padding:8px 8px 10px;box-shadow:0 14px 26px -14px rgba(0,0,0,.6)}
+.pol img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.pol figcaption{color:var(--tinta);font-size:.82rem;font-weight:800;line-height:1.2;padding:8px 2px 0}
+.pol figcaption span{font-family:var(--f-mono);font-weight:700;color:var(--violeta);margin-right:.4em}
+.pol .cinta{top:-12px;left:50%;margin-left:-55px;transform:rotate(-3deg)}
+.pol:nth-child(1){grid-column:1/6;transform:rotate(-2deg)}
+.pol:nth-child(2){grid-column:6/10;transform:rotate(1.5deg);margin-top:30px}
+.pol:nth-child(3){grid-column:10/13;transform:rotate(-1deg)}
+.pol:nth-child(4){grid-column:1/4;transform:rotate(2deg)}
+.pol:nth-child(5){grid-column:4/9;transform:rotate(-1.2deg);margin-top:-20px}
+.pol:nth-child(6){grid-column:9/13;transform:rotate(1deg);margin-top:20px}
+.pol:nth-child(7){grid-column:1/5;transform:rotate(-1.5deg)}
+.pol:nth-child(8){grid-column:5/9;transform:rotate(2deg);margin-top:16px}
+.pol:nth-child(9){grid-column:9/13;transform:rotate(-2deg)}
+@media (max-width:760px){.mural{grid-template-columns:repeat(2,minmax(0,1fr))}.pol:nth-child(n){grid-column:auto;margin-top:0}}
+
+/* ciclo */
 .ciclo{background:var(--rosa);color:var(--tinta);padding-top:clamp(56px,8vw,96px);position:relative}
 .ciclo .cab{display:grid;gap:14px;max-width:900px}
 .ciclo .cab .eyebrow{color:var(--violeta-osc)}
-.ciclo h2{font-size:clamp(2rem,5.6vw,4.4rem);font-weight:900;letter-spacing:.02em;line-height:1.02;text-transform:uppercase}
+.ciclo h2{font-family:var(--f-display);font-size:clamp(2rem,5.6vw,4.4rem);font-weight:900;line-height:1.02;text-transform:uppercase}
 .ciclo .cab p{max-width:56ch;font-size:1.05rem}
 .onda{display:block;width:100%;height:clamp(60px,9vw,120px);margin-top:clamp(28px,4vw,48px)}
 .ciclo-cuerpo{background:var(--violeta);color:#fff;padding-block:0 clamp(56px,8vw,96px)}
 .encuentros{display:grid;gap:clamp(20px,3vw,32px)}
 .encuentro{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:clamp(18px,3vw,40px);padding:clamp(22px,3vw,32px);border:2px solid #fff;border-radius:28px;background:color-mix(in srgb,var(--violeta-osc) 35%,transparent)}
-.encuentro.prox{background:var(--crema);color:var(--tinta);border-color:var(--tinta);box-shadow:8px 8px 0 var(--verde)}
+.encuentro.prox{background:var(--crema) url("arrugado.jpg") center/1200px auto;color:var(--tinta);border-color:var(--tinta);box-shadow:8px 8px 0 var(--verde)}
 .cuando{display:grid;gap:6px;align-content:start}
 .cuando .dia{font-family:var(--f-display);font-weight:900;font-size:3.4rem;line-height:.9;font-variant-numeric:tabular-nums}
-.cuando .mes{font-family:var(--f-display);font-weight:700;font-size:1rem;text-transform:uppercase}
-.cuando .hora{font-family:var(--f-mono);font-size:.85rem}
-.estado{justify-self:start;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:.3em .75em;border-radius:999px;border:1.5px solid currentColor;margin-top:6px}
-.prox .estado{background:var(--verde-cla);border-color:var(--tinta)}
-.encuentro blockquote{margin:0;font-family:var(--f-texto);font-style:italic;font-weight:700;font-size:clamp(1.15rem,2.2vw,1.55rem);line-height:1.3;text-wrap:balance}
+.cuando .mes{font-family:var(--f-display);font-weight:800;font-size:1rem;text-transform:uppercase}
+.cuando .hora{font-family:var(--f-mono);font-weight:700;font-size:.85rem}
+.estado-e{justify-self:start;font-family:var(--f-mono);font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.3em .75em;border-radius:999px;border:1.5px solid currentColor;margin-top:6px}
+.prox .estado-e{background:var(--verde-cla);border-color:var(--tinta)}
+.encuentro blockquote{margin:0;font-style:italic;font-weight:700;font-size:clamp(1.15rem,2.2vw,1.55rem);line-height:1.3;text-wrap:balance}
 .encuentro .quien{margin-top:14px;font-size:1.15rem}
-.encuentro .quien b{font-weight:700}
-.encuentro .meet{display:inline-flex;align-items:center;gap:.5em;margin-top:14px;font-family:var(--f-mono);font-size:.8rem;padding:.35em .9em;border-radius:999px;background:color-mix(in srgb,#fff 22%,transparent)}
+.encuentro .meet{display:inline-flex;align-items:center;gap:.5em;margin-top:14px;font-family:var(--f-mono);font-weight:700;font-size:.8rem;padding:.35em .9em;border-radius:999px;background:color-mix(in srgb,#fff 22%,transparent)}
 .prox .meet{background:var(--rosa-cla)}
 .meet i{width:10px;height:10px;border-radius:50%;background:var(--verde-cla)}
 @media (max-width:640px){.encuentro{grid-template-columns:minmax(0,1fr)}.cuando{grid-template-columns:auto 1fr;align-items:end;column-gap:14px}.cuando .dia{grid-row:span 2}}
-/* secciones genéricas */
-section.sec{padding-block:clamp(56px,8vw,100px)}
-.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 32px;margin-bottom:clamp(28px,4vw,44px)}
-.sec-head h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:900}
-.sec-head .eyebrow{display:block;margin-bottom:10px;color:var(--violeta-osc)}
-.sec-head p{max-width:46ch}
-@media (max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero-art{max-width:440px;justify-self:center;width:100%}}
-footer{padding-block:44px 32px;border-top:2px solid var(--tinta)}
-footer .wrap{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px}
-footer img{height:40px;width:auto}
-footer h4{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px;color:var(--violeta-osc)}
-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.93rem}
-footer a{text-decoration:none}
-footer a:hover{text-decoration:underline;text-decoration-color:var(--rosa);text-decoration-thickness:3px}
-.colofon{margin-top:32px;padding-top:14px;border-top:1px solid var(--tinta);font-family:var(--f-mono);font-size:.75rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
-@media (max-width:700px){footer .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}footer .wrap>div:first-child{grid-column:1/-1}}
+
+/* cierre */
+.sumate{position:relative;padding-block:clamp(70px,9vw,120px) clamp(56px,8vw,90px);text-align:center}
+.sumate .franja{margin-inline:auto;max-width:38ch;font-size:clamp(1.05rem,2vw,1.3rem)}
+.sumate .collage{justify-content:center;margin-top:26px;font-size:clamp(2rem,6vw,4rem)}
+footer{padding-block:32px 28px;border-top:2px solid var(--tinta);background:color-mix(in srgb,var(--papel) 75%,transparent)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+footer img{height:40px;width:auto;display:block}
+footer p{font-family:var(--f-mono);font-weight:700;font-size:.8rem}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="grano"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .35 0"/><feComposite in2="SourceGraphic" operator="in"/><feBlend in="SourceGraphic" mode="multiply"/></filter>
+    <symbol id="mancha" viewBox="0 0 400 320"><path d="M58 52C112 2 214 -8 290 30s120 120 96 190-104 106-188 96S28 262 10 196 4 102 58 52Z" fill="#c35aa1" filter="url(#grano)"/></symbol>
+    <symbol id="molinete" viewBox="0 0 100 100"><g fill="#f6679e"><path d="M50 50 50 0 20 30Z"/><path d="M50 50 100 50 70 20Z"/><path d="M50 50 50 100 80 70Z"/><path d="M50 50 0 50 30 80Z"/></g></symbol>
+  </defs>
+</svg>
+
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#inicio"><img src="logo.png" alt="REDINSEX"></a>
     <nav class="menu" aria-label="Principal">
       <ul>
         <li><a href="#la-red">La red</a></li>
+        <li><a href="#donde">Dónde estamos</a></li>
+        <li><a href="#congreso">2° Congreso</a></li>
         <li><a href="#actividades">Actividades</a></li>
       </ul>
     </nav>
@@ -133,64 +200,150 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--rosa);text-
       <summary>Menú</summary>
       <ul>
         <li><a href="#la-red">La red</a></li>
+        <li><a href="#donde">Dónde estamos</a></li>
+        <li><a href="#congreso">2° Congreso</a></li>
         <li><a href="#actividades">Actividades</a></li>
       </ul>
     </details>
   </div>
 </header>
+
 <main id="inicio">
-  <section class="hero grano">
+  <section class="hero">
     <div class="wrap">
       <div>
         <span class="eyebrow">Red Argentina de Investigadores en Diversidades y Disidencias Sexogenéricas</span>
-        <h1>Un sitio de encuentro para investigar <em>diversidades</em> y <b>disidencias</b> sexogenéricas.</h1>
-        <p class="bajada">Proyectos individuales y colectivos de todo el país, en diálogo.</p>
+        <h1 class="collage" aria-label="Investigamos para resistir y transformar">
+          <span class="c1" aria-hidden="true">INVESTIGAMOS</span>
+          <span class="c2" aria-hidden="true">para</span>
+          <span class="c3" aria-hidden="true">RESISTIR</span>
+          <span class="c4" aria-hidden="true">y</span>
+          <span class="c5" aria-hidden="true">TRANSFORMAR</span>
+        </h1>
+        <p class="bajada">Un sitio de encuentro entre proyectos de investigación, individuales y colectivos, sobre diversidades y disidencias sexogenéricas en todo el país.</p>
         <div class="ctas">
           <a class="btn" href="#la-red">Conocé la red</a>
           <a class="btn alt" href="#actividades">Próximo encuentro</a>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true"><img src="isotipo.png" alt=""></div>
-    </div>
-  </section>
-  <section class="la-red" id="la-red">
-    <div class="wrap">
-      <div class="cab"><span class="eyebrow">La red</span><h2>Quiénes somos</h2></div>
-      <div class="ventanas">
-        <article class="ventana">
-          <div class="barra" aria-hidden="true"><span>+</span><span>−</span><span>×</span></div>
-          <div class="cuerpo">
-            <h3>Somos</h3>
-            <p>La Red Argentina de Investigadores en Diversidades y Disidencias Sexogenéricas (REDINSEX) surge con el propósito de crear un sitio de encuentro entre los proyectos de investigación, tanto individuales como colectivos, sobre cuestiones relacionadas con las diversidades y disidencias sexo-genéricas a nivel nacional.</p>
-          </div>
-        </article>
-        <article class="ventana">
-          <div class="barra" aria-hidden="true"><span>+</span><span>−</span><span>×</span></div>
-          <div class="cuerpo">
-            <h3>Objetivos</h3>
-            <p>Generar un espacio de intercambios y diálogo entre investigadores que aborden diversos intereses sobre identidades de género, orientaciones sexuales, expresiones de género y los derechos humanos de la comunidad LGBTIQNb+, entre otras aristas.</p>
-            <p>La Red también se enfocará en el armado de workshops nacionales y/o regionales periódicos, proporcionando formación continua y espacios para la discusión y desarrollo de nuevas investigaciones.</p>
-          </div>
-        </article>
+      <div class="escena">
+        <svg class="mancha" aria-hidden="true"><use href="#mancha"/></svg>
+        <svg class="molinete" aria-hidden="true"><use href="#molinete"/></svg>
+        <svg class="molinete b" aria-hidden="true"><use href="#molinete"/></svg>
+        <span class="sticker" aria-hidden="true"><img src="isotipo.png" alt=""></span>
+        <span class="lema">Somos REDINSEX</span>
+        <img class="gente" src="gente.webp" alt="Integrantes de REDINSEX con una bandera del orgullo" width="1028" height="492">
       </div>
     </div>
   </section>
+
+  <section class="red" id="la-red">
+    <div class="wrap grid">
+      <div class="bloque">
+        <svg class="mancha" aria-hidden="true"><use href="#mancha"/></svg>
+        <h2 class="titulo">Somos REDINSEX</h2>
+        <p class="franja"><span>La Red Argentina de Investigadores en Diversidades y Disidencias Sexogenéricas (<b>REDINSEX</b>) surge con el propósito de crear un sitio de <b>encuentro</b> entre los proyectos de investigación, tanto individuales como colectivos, sobre cuestiones relacionadas con las diversidades y disidencias sexo-genéricas a nivel nacional.</span></p>
+      </div>
+      <div class="bloque b">
+        <svg class="mancha" aria-hidden="true"><use href="#mancha"/></svg>
+        <h2 class="titulo">Objetivos</h2>
+        <p class="franja"><span>Generar un espacio de intercambios y diálogo entre investigadores que aborden diversos intereses sobre identidades de género, orientaciones sexuales, expresiones de género y los derechos humanos de la comunidad <b>LGBTIQNb+</b>, entre otras aristas.</span></p>
+        <p class="franja"><span>La Red también se enfocará en el armado de <b>workshops</b> nacionales y/o regionales periódicos, proporcionando formación continua y espacios para la discusión y desarrollo de nuevas investigaciones.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="donde" id="donde">
+    <div class="wrap">
+      <span class="eyebrow">Red federal</span>
+      <h2 class="titulo">Aquí estamos</h2>
+      <div class="grid">
+        <figure class="mapa">
+          <span class="cinta" aria-hidden="true"></span>
+          <img src="mapa.jpg" alt="Mapa de Argentina con las provincias donde hay integrantes de REDINSEX" width="760" height="887">
+        </figure>
+        <div>
+          <div class="provincias">
+            <details class="prov"><summary>Buenos Aires</summary><div class="lista">
+              <div><b>UBA</b><ul><li>FFyL - IIEGE</li><li>ICA</li><li>Instituto de Lingüística</li><li>FSOC - IIGG</li><li>Facultad de Derecho</li><li>FADU – Instituto de Arte Americano e Investigaciones Estéticas “Mario Buschiazzo”</li><li>Instituto de Enseñanza Superior Alicia Moreau de Justo</li></ul></div>
+              <div><b>UNGS</b><ul><li>ICO</li><li>IDH</li></ul></div>
+              <div><b>UNMdP</b><ul><li>Facultad de Humanidades - Grupo de Estudio sobre Familia, Género y Subjetividades</li><li>INHUS - CONICET</li></ul></div>
+              <div><b>UNSAM</b><ul><li>EIDAES</li></ul></div>
+              <div><b>UNAJ</b><ul><li>Facultad de Ciencias Sociales y Administración</li></ul></div>
+              <div><b>UNLP</b><ul><li>Facultad de Arquitectura y Urbanismo</li><li>FAHCE</li><li>Centro Interdisciplinario de Investigaciones en Género (CINIG)</li><li>IDIHCS - CONICET</li></ul></div>
+              <div><b>UNLZ</b></div>
+              <div><b>UNDAV</b></div>
+              <div><b>UNPAZ</b><ul><li>Instituto de Estudios de América Latina y el Caribe (IEALC)</li><li>Instituto de Estudios Sociales en Contextos Desiguales (IESCODE)</li></ul></div>
+              <div><b>UNA</b><ul><li>Secretaría de Igualdad, Derechos y Diversidad</li><li>Instituto de Investigación en Teatro</li></ul></div>
+              <div><b>UNTREF</b></div>
+              <div><b>UNLA</b></div>
+              <div><b>Universidad Nacional de La Matanza</b></div>
+              <div><b>UTDT</b><ul><li>Centro de Evaluación por Evidencia</li></ul></div>
+              <div><b>Grupo de Investigación Deleuze: Ontología Práctica</b></div>
+              <div><b>Otras instituciones</b><ul><li>Fundación Kaleidos</li><li>Ministerio de Salud Provincia de Buenos Aires</li><li>Programa de Implementación de Políticas de Género y Diversidad Sexual en Salud. Dirección de Equidad de Género en Salud</li><li>Gobierno de la Ciudad de Buenos Aires</li><li>Cooperativa Nadia Echazú</li><li>Laboratorio de Políticas Públicas – Dirección de Políticas de Género – Municipalidad de San Isidro</li><li>Consejería de Interrupción Voluntaria del Embarazo “La Hoguera” – Espacio de Acompañamiento “Casa Pueblo” (Chivilcoy)</li><li>Escuela Municipal de Música (San Martín)</li></ul></div>
+            </div></details>
+            <details class="prov"><summary>Chaco</summary><div class="lista"><div><b>Universidad Nacional del Nordeste</b><ul><li>FADyCC</li><li>Facultad de Humanidades</li><li>IIGHI - CONICET</li></ul></div></div></details>
+            <details class="prov"><summary>Chubut</summary><div class="lista"><ul><li>Puerto Madryn – Trans Formar Futuro</li></ul></div></details>
+            <details class="prov"><summary>Córdoba</summary><div class="lista">
+              <div><b>UNC</b><ul><li>Facultad de Ciencias de la Comunicación</li><li>FURIE</li><li>IIPSI - CONICET</li><li>IDH - CONICET</li><li>IDACOR - CONICET</li><li>CIECS - CONICET</li><li>CePIA</li><li>CEA - FCS</li><li>Centro de Investigación María Saleme de Burnichon (CIFFYH)</li></ul></div>
+              <div><b>Otras instituciones</b><ul><li>Universidad Católica de Córdoba</li><li>Municipalidad de Villa María</li><li>Municipalidad de Jesús María</li><li>Escuela Secundaria La Salle (Estancia Vieja - Punilla)</li><li>INTI - Programa de Implementación de Políticas de Género y Diversidad Sexual en Salud. Dirección de Equidad de Género en Salud</li></ul></div>
+            </div></details>
+            <details class="prov"><summary>Corrientes</summary><div class="lista"><ul><li>ONG Positivo Goya</li></ul></div></details>
+            <details class="prov"><summary>Entre Ríos</summary><div class="lista"><ul><li>UNER – Facultad de Trabajo Social</li></ul></div></details>
+            <details class="prov"><summary>Jujuy</summary><div class="lista"><div><b>UNJU</b><ul><li>CESUR</li><li>GUEPARDXS – Facultad de Humanidades y Ciencias Sociales</li></ul></div></div></details>
+            <details class="prov"><summary>La Pampa</summary><div class="lista"><div><b>UNLPAM</b><ul><li>Facultad de Ciencias Humanas – Instituto de Estudios Sociohistóricos</li></ul></div></div></details>
+            <details class="prov"><summary>La Rioja</summary><div class="lista"><div><b>UNLAR</b><ul><li>Instituto de Análisis de Políticas Públicas (IAPP)</li></ul></div></div></details>
+            <details class="prov"><summary>Misiones</summary><div class="lista"><ul><li>Ministerio Público de la Defensa</li></ul></div></details>
+            <details class="prov"><summary>Río Negro</summary><div class="lista"><div><b>UNRN</b><ul><li>IIDYPCA - CONICET</li></ul></div></div></details>
+            <details class="prov"><summary>Salta</summary><div class="lista"><div><b>UNSA</b><ul><li>ICSOH - CONICET</li></ul></div></div></details>
+            <details class="prov"><summary>San Juan</summary><div class="lista"><div><b>UNSJ</b><ul><li>IISE</li></ul></div></div></details>
+            <details class="prov"><summary>San Luis</summary><div class="lista"><div><b>UNSL</b><ul><li>Facultad de Psicología – Laboratorio de Investigación en Ciencias del Comportamiento</li></ul></div></div></details>
+            <details class="prov"><summary>Santa Cruz</summary><div class="lista"><ul><li>Hospital de Alta Complejidad SAMIC</li></ul></div></details>
+            <details class="prov"><summary>Santa Fe</summary><div class="lista"><div><b>UNR</b><ul><li>IECH - CONICET</li></ul></div><div><b>UNL</b></div><div><b>UNRAF</b></div></div></details>
+            <details class="prov"><summary>Santiago del Estero</summary><div class="lista"><div><b>UNSE</b><ul><li>INDES - CONICET</li></ul></div></div></details>
+            <details class="prov"><summary>Tucumán</summary><div class="lista">
+              <div><b>UNT</b><ul><li>Facultad de Ciencias Naturales – Instituto Miguel Lillo</li><li>Facultad de Filosofía y Letras</li><li>Centro de Estudios sobre Diversidad Sexual (CEDISEX)</li></ul></div>
+              <div><b>Fundación Leswarmi: Mujeres Originarias Lesbianas y Bisexuales</b></div>
+              <div><b>Instituto Matria Tucumán: Instituto sobre cuestiones de Género</b></div>
+            </div></details>
+            <details class="prov"><summary>Otras instituciones</summary><div class="lista"><ul><li>RUGE</li><li>Ministerio de Salud de la Nación</li><li>Monitor de Crímenes de Odio LGBTTIQ+ en América Latina “Marielle Franco”</li><li>Enclave Consultora</li><li>Mundo Sur</li><li>Prosumia (Empresa de Opinión Pública)</li><li>UNFPA LACRO (Fondo de Población de las Naciones Unidas. Agencia de Naciones Unidas para la Salud Sexual y Reproductiva)</li></ul></div></details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="congreso" id="congreso">
+    <div class="wrap">
+      <h2 class="titulo">2° Congreso</h2>
+      <p class="sub">Córdoba · junio de 2026 · nueve ejes de trabajo</p>
+      <div class="mural">
+        <figure class="pol"><span class="cinta" aria-hidden="true"></span><img src="congreso-1.jpg" alt="Sala del eje 1 durante el congreso"><figcaption><span>Eje 1</span>Activismo, ciudadanía y activismos sociales</figcaption></figure>
+        <figure class="pol"><span class="cinta" aria-hidden="true"></span><img src="congreso-2.jpg" alt="Cartel del eje 2 en la puerta de un aula"><figcaption><span>Eje 2</span>Educación, infancias, normatividades y desplazamientos</figcaption></figure>
+        <figure class="pol"><span class="cinta" aria-hidden="true"></span><img src="congreso-3.jpg" alt="Mesa del eje 3 con público"><figcaption><span>Eje 3</span>Trabajo, cuidados y condiciones de vida</figcaption></figure>
+        <figure class="pol"><span class="cinta" aria-hidden="true"></span><img src="congreso-4.jpg" alt="Cartel del eje 4 en una puerta"><figcaption><span>Eje 4</span>Expresiones estéticas y prácticas culturales</figcaption></figure>
+        <figure class="pol"><span class="cinta" aria-hidden="true"></span><img src="congreso-5.jpg" alt="Cartel del eje 5 en la puerta del aula"><figcaption><span>Eje 5</span>Erotismo, afectos y sociabilidad</figcaption></figure>
+        <figure class="pol"><span class="cinta" aria-hidden="true"></span><img src="congreso-6.jpg" alt="Exposición en la mesa del eje 6"><figcaption><span>Eje 6</span>Salud, desigualdades y resistencias</figcaption></figure>
+        <figure class="pol"><span class="cinta" aria-hidden="true"></span><img src="congreso-7.jpg" alt="Ronda de intercambio en el eje 7"><figcaption><span>Eje 7</span>Ambientes, territorios y espacios</figcaption></figure>
+        <figure class="pol"><span class="cinta" aria-hidden="true"></span><img src="congreso-8.jpg" alt="Cartel del eje 8 junto a una puerta"><figcaption><span>Eje 8</span>Historias, memorias y archivos</figcaption></figure>
+        <figure class="pol"><span class="cinta" aria-hidden="true"></span><img src="congreso-9.jpg" alt="Cartel del eje 9 en la puerta del aula"><figcaption><span>Eje 9</span>Estado, instituciones y políticas públicas</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
   <section id="actividades">
-    <div class="ciclo grano">
-      <div class="wrap cab">
+    <div class="ciclo">
+      <div class="wrap"><div class="cab">
         <span class="eyebrow">Ciclo de encuentros virtuales</span>
         <h2>Algo nuevo, algo viejo, algo prestado.</h2>
         <p>Encuentros virtuales por Google Meet, de 12 a 13 h.</p>
-      </div>
-      <svg class="onda" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 C 240 0 360 110 720 110 C 1000 110 1180 60 1440 100 L1440 120 L0 120 Z" fill="var(--violeta)"/></svg>
+      </div></div>
+      <svg class="onda" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 C 240 0 360 110 720 110 C 1000 110 1180 60 1440 100 L1440 120 L0 120 Z" fill="#a63981"/></svg>
     </div>
     <div class="ciclo-cuerpo">
       <div class="wrap encuentros">
         <article class="encuentro prox">
-          <div class="cuando">
-            <span class="dia">03</span><span class="mes">Noviembre 2026</span><span class="hora">Martes · 12 a 13 h</span>
-            <span class="estado">Próximo</span>
-          </div>
+          <div class="cuando"><span class="dia">03</span><span class="mes">Noviembre 2026</span><span class="hora">Martes · 12 a 13 h</span><span class="estado-e">Próximo</span></div>
           <div>
             <blockquote>“Tramas afectivas y políticas de la proximidad: cuerpos, subjetivaciones y organizaciones en los asuntos comunes. Algunas notas con Vientos de Libertad Disidencias del MTE, Corrientes”</blockquote>
             <p class="quien">por <b>Laura González Foutel</b></p>
@@ -198,10 +351,7 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--rosa);text-
           </div>
         </article>
         <article class="encuentro">
-          <div class="cuando">
-            <span class="dia">06</span><span class="mes">Octubre 2026</span><span class="hora">Martes · 12 a 13 h</span>
-            <span class="estado">Realizado</span>
-          </div>
+          <div class="cuando"><span class="dia">06</span><span class="mes">Octubre 2026</span><span class="hora">Martes · 12 a 13 h</span><span class="estado-e">Realizado</span></div>
           <div>
             <blockquote>“Literatura LGBTIQNB+: un recorrido por catálogos de editoriales independientes”</blockquote>
             <p class="quien">por <b>Joel Cuenca</b></p>
@@ -211,16 +361,22 @@ footer a:hover{text-decoration:underline;text-decoration-color:var(--rosa);text-
       </div>
     </div>
   </section>
-</main>
-<footer class="grano">
-  <div class="wrap">
-    <div>
-      <img src="logo.png" alt="REDINSEX">
-      <p style="margin-top:12px;max-width:36ch;font-size:.93rem">Red Argentina de Investigadores en Diversidades y Disidencias Sexogenéricas.</p>
+
+  <section class="sumate">
+    <div class="wrap">
+      <p class="franja"><span>Una red federal, interdisciplinaria y comprometida con una investigación transformadora.</span></p>
+      <div class="collage" aria-label="Sumate">
+        <span class="c5" aria-hidden="true">¡SU</span><span class="c6" aria-hidden="true">MA</span><span class="c4" aria-hidden="true">TE!</span>
+      </div>
     </div>
-    <div><h4>Secciones</h4><ul><li><a href="#la-red">La red</a></li><li><a href="#actividades">Actividades</a></li></ul></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo.png" alt="REDINSEX">
+    <p>Red Argentina de Investigadores en Diversidades y Disidencias Sexogenéricas · redinsex.ar</p>
   </div>
-  <div class="wrap"><div class="colofon"><span>REDINSEX · 2026</span><span>redinsex.ar</span></div></div>
 </footer>
 </body>
 </html>
