@@ -1,0 +1,6 @@
+# Datos personales: nunca subir planillas de respuestas al repo público
+*.csv
+*.xlsx
+*.xls
+*.ods
+.DS_Store
