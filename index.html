@@ -224,6 +224,14 @@ footer p{font-weight:600;font-size:.85rem}
 footer .redes{gap:10px}
 footer .redes a{padding:.5em;box-shadow:none}
 footer .redes a span{position:absolute;left:-9999px}
+.ver-congresos{margin-top:clamp(28px,4vw,40px)}
+.congreso.uno{background:var(--verde-osc)}
+.congresos-intro{padding-block:clamp(40px,6vw,72px) clamp(28px,4vw,44px)}
+.congresos-intro .franja{margin-top:18px;max-width:60ch}
+.saltos{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.saltos a{font-family:var(--f-display);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:#fff;padding:.55em .9em;box-shadow:3px 4px 0 rgba(20,20,20,.22)}
+.saltos a:first-child{background:var(--violeta);transform:rotate(-1.5deg)}
+.saltos a:last-child{background:var(--verde-osc);transform:rotate(1.2deg)}
 </style>
 </head>
 <body>
@@ -234,7 +242,7 @@ footer .redes a span{position:absolute;left:-9999px}
       <ul>
         <li><a href="#la-red">La red</a></li>
         <li><a href="#donde">Dónde estamos</a></li>
-        <li><a href="#congreso">2° Congreso</a></li>
+        <li><a href="congresos.html">Congresos</a></li>
         <li><a href="#actividades">Actividades</a></li>
         <li><a href="integrantes.html">Integrantes</a></li>
         <li><a class="sumarse" href="#sumate">Sumate</a></li>
@@ -245,7 +253,7 @@ footer .redes a span{position:absolute;left:-9999px}
       <ul>
         <li><a href="#la-red">La red</a></li>
         <li><a href="#donde">Dónde estamos</a></li>
-        <li><a href="#congreso">2° Congreso</a></li>
+        <li><a href="congresos.html">Congresos</a></li>
         <li><a href="#actividades">Actividades</a></li>
         <li><a href="integrantes.html">Integrantes</a></li>
         <li><a href="#sumate">Sumate</a></li>
@@ -338,8 +346,8 @@ footer .redes a span{position:absolute;left:-9999px}
 
   <section class="congreso" id="congreso">
     <div class="wrap">
-      <h2 class="titulo">El congreso en fotos</h2>
-      <p class="sub">2° Congreso Nacional de Estudios Interdisciplinares sobre Diversidad Sexual y de Género · Córdoba, 2026</p>
+      <h2 class="titulo">2° Congreso</h2>
+      <p class="sub">Segundo Congreso Nacional de Estudios Interdisciplinares sobre Diversidad y Disidencias Sexuales y de Género · Córdoba, 24&nbsp;al&nbsp;26&nbsp;de&nbsp;junio&nbsp;de&nbsp;2026</p>
       <div class="actas">
         <span class="cinta" aria-hidden="true"></span><span class="cinta der" aria-hidden="true"></span>
         <h3 class="collage" aria-label="Próximamente, las actas aquí"><span class="c1">Próxima</span><span class="c2">mente</span><span class="c6">las</span><span class="c3">ACTAS</span><span class="c4">aquí</span></h3>
@@ -348,31 +356,7 @@ footer .redes a span{position:absolute;left:-9999px}
           <a class="btn" href="https://www.aacademica.org/2congresodiversidad" target="_blank" rel="noopener">IR A ACTA ACADÉMICA →</a>
         </div>
       </div>
-      <h3 class="subcongreso">Mesas centrales y paneles</h3>
-      <div class="placas">
-        <a class="placa" href="placa-mesa-1-g.jpg" data-alt="Apertura: Palabras de apertura y Homenaje a Mauro Cabral Grinspan"><span class="cinta" aria-hidden="true"></span><img src="placa-mesa-1.jpg" alt="Apertura: Palabras de apertura y Homenaje a Mauro Cabral Grinspan" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-mesa-2-g.jpg" data-alt="Panel 1: La experiencia de investigar la diversidad y disidencia sexo-genérica desde/en Argentina"><span class="cinta" aria-hidden="true"></span><img src="placa-mesa-2.jpg" alt="Panel 1: La experiencia de investigar la diversidad y disidencia sexo-genérica desde/en Argentina" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-mesa-3-g.jpg" data-alt="Mesa central 1: El Rol de las Universidades en Políticas sobre Diversidades/Disidencias Sexo-Genéricas"><span class="cinta" aria-hidden="true"></span><img src="placa-mesa-3.jpg" alt="Mesa central 1: El Rol de las Universidades en Políticas sobre Diversidades/Disidencias Sexo-Genéricas" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-mesa-4-g.jpg" data-alt="Presentación de libros: Dame 10 y te lo cuento"><span class="cinta" aria-hidden="true"></span><img src="placa-mesa-4.jpg" alt="Presentación de libros: Dame 10 y te lo cuento" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-mesa-5-g.jpg" data-alt="Panel 2: Conspiraciones Trans: Estrategias y Resistencias Colectivas en el Ámbito Universitario"><span class="cinta" aria-hidden="true"></span><img src="placa-mesa-5.jpg" alt="Panel 2: Conspiraciones Trans: Estrategias y Resistencias Colectivas en el Ámbito Universitario" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-mesa-6-g.jpg" data-alt="Mesa central 2: Las Derechas Contra los Derechos"><span class="cinta" aria-hidden="true"></span><img src="placa-mesa-6.jpg" alt="Mesa central 2: Las Derechas Contra los Derechos" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-mesa-7-g.jpg" data-alt="Panel 3: Experiencias de los activismos en la Gestión Pública"><span class="cinta" aria-hidden="true"></span><img src="placa-mesa-7.jpg" alt="Panel 3: Experiencias de los activismos en la Gestión Pública" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-mesa-8-g.jpg" data-alt="Mesa central 3: ¿Y ahora qué? Apuestas y Desafíos para un Futuro Sexo-Disidente"><span class="cinta" aria-hidden="true"></span><img src="placa-mesa-8.jpg" alt="Mesa central 3: ¿Y ahora qué? Apuestas y Desafíos para un Futuro Sexo-Disidente" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-mesa-9-g.jpg" data-alt="Cierre del congreso"><span class="cinta" aria-hidden="true"></span><img src="placa-mesa-9.jpg" alt="Cierre del congreso" loading="lazy" width="480" height="600"></a>
-      </div>
-      <h3 class="subcongreso">Ejes de trabajo</h3>
-      <div class="placas">
-        <a class="placa" href="placa-eje-1-g.jpg" data-alt="Eje 1: Activismos, ciudadanía y movimientos sociales"><span class="cinta" aria-hidden="true"></span><img src="placa-eje-1.jpg" alt="Eje 1: Activismos, ciudadanía y movimientos sociales" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-eje-2-g.jpg" data-alt="Eje 2: Educación, infancias, normatividades y desplazamientos"><span class="cinta" aria-hidden="true"></span><img src="placa-eje-2.jpg" alt="Eje 2: Educación, infancias, normatividades y desplazamientos" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-eje-3-g.jpg" data-alt="Eje 3: Trabajo, cuidados y condiciones de vida"><span class="cinta" aria-hidden="true"></span><img src="placa-eje-3.jpg" alt="Eje 3: Trabajo, cuidados y condiciones de vida" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-eje-4-g.jpg" data-alt="Eje 4: Expresiones estéticas y prácticas culturales"><span class="cinta" aria-hidden="true"></span><img src="placa-eje-4.jpg" alt="Eje 4: Expresiones estéticas y prácticas culturales" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-eje-5-g.jpg" data-alt="Eje 5: Erotismo, afectos y sociabilidad"><span class="cinta" aria-hidden="true"></span><img src="placa-eje-5.jpg" alt="Eje 5: Erotismo, afectos y sociabilidad" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-eje-6-g.jpg" data-alt="Eje 6: Salud, desigualdades y resistencias"><span class="cinta" aria-hidden="true"></span><img src="placa-eje-6.jpg" alt="Eje 6: Salud, desigualdades y resistencias" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-eje-7-g.jpg" data-alt="Eje 7: Ambientes, territorios y espacios"><span class="cinta" aria-hidden="true"></span><img src="placa-eje-7.jpg" alt="Eje 7: Ambientes, territorios y espacios" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-eje-8-g.jpg" data-alt="Eje 8: Historias, memorias y archivos"><span class="cinta" aria-hidden="true"></span><img src="placa-eje-8.jpg" alt="Eje 8: Historias, memorias y archivos" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-eje-9-g.jpg" data-alt="Eje 9: Estado, instituciones y políticas públicas"><span class="cinta" aria-hidden="true"></span><img src="placa-eje-9.jpg" alt="Eje 9: Estado, instituciones y políticas públicas" loading="lazy" width="480" height="600"></a>
-        <a class="placa" href="placa-eje-10-g.jpg" data-alt="Collage de participantes del congreso"><span class="cinta" aria-hidden="true"></span><img src="placa-eje-10.jpg" alt="Collage de participantes del congreso" loading="lazy" width="480" height="600"></a>
-      </div>
+      <p class="ver-congresos"><a class="btn alt" href="congresos.html">Ver los congresos →</a></p>
     </div>
   </section>
 

@@ -224,6 +224,14 @@ footer p{font-weight:600;font-size:.85rem}
 footer .redes{gap:10px}
 footer .redes a{padding:.5em;box-shadow:none}
 footer .redes a span{position:absolute;left:-9999px}
+.ver-congresos{margin-top:clamp(28px,4vw,40px)}
+.congreso.uno{background:var(--verde-osc)}
+.congresos-intro{padding-block:clamp(40px,6vw,72px) clamp(28px,4vw,44px)}
+.congresos-intro .franja{margin-top:18px;max-width:60ch}
+.saltos{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.saltos a{font-family:var(--f-display);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:#fff;padding:.55em .9em;box-shadow:3px 4px 0 rgba(20,20,20,.22)}
+.saltos a:first-child{background:var(--violeta);transform:rotate(-1.5deg)}
+.saltos a:last-child{background:var(--verde-osc);transform:rotate(1.2deg)}
 
 /* página de integrantes */
 nav.menu a[aria-current]{background:var(--verde-cla)}
@@ -236,6 +244,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
 .int .foto img,.int .ini{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
 .int .ini{display:grid;place-items:center;background:var(--violeta);color:#fff;font-family:var(--f-display);font-weight:800;font-size:clamp(3rem,7vw,4.5rem);letter-spacing:.06em}
 .int .cinta{top:-22px;left:50%;margin-left:-55px;transform:rotate(-3deg);z-index:1}
+.int .nombre.minus{text-transform:none}
 .int .nombre{font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--violeta);font-size:1.12rem;line-height:1.15;margin:0}
 .int .pron{margin:-4px 0 0;font-size:.82rem;color:#5b5560;font-style:italic}
 .int .inst{margin:0;font-weight:700;font-size:.88rem;line-height:1.35}
@@ -281,7 +290,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
       <ul>
         <li><a href="index.html#la-red">La red</a></li>
         <li><a href="index.html#donde">Dónde estamos</a></li>
-        <li><a href="index.html#congreso">2° Congreso</a></li>
+        <li><a href="congresos.html">Congresos</a></li>
         <li><a href="index.html#actividades">Actividades</a></li>
         <li><a href="integrantes.html" aria-current="page">Integrantes</a></li>
         <li><a class="sumarse" href="index.html#sumate">Sumate</a></li>
@@ -292,7 +301,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
       <ul>
         <li><a href="index.html#la-red">La red</a></li>
         <li><a href="index.html#donde">Dónde estamos</a></li>
-        <li><a href="index.html#congreso">2° Congreso</a></li>
+        <li><a href="congresos.html">Congresos</a></li>
         <li><a href="index.html#actividades">Actividades</a></li>
         <li><a href="integrantes.html" aria-current="page">Integrantes</a></li>
         <li><a href="index.html#sumate">Sumate</a></li>
@@ -306,7 +315,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
     <div class="wrap">
       <h1 class="titulo">Integrantes</h1>
       <p class="franja"><span>Quiénes investigan en la red, desde dónde y sobre qué.</span></p>
-      <div class="buscar" role="search"><label for="q">Buscar<input id="q" type="search" placeholder="Nombre, tema, institución…" autocomplete="off"></label><label for="prov">Provincia<select id="prov"><option value="">Todas</option><option>Buenos Aires</option><option>Ciudad Autónoma de Buenos Aires</option><option>Córdoba</option><option>La Pampa</option><option>La Rioja</option></select></label></div>
+      <div class="buscar" role="search"><label for="q">Buscar<input id="q" type="search" placeholder="Nombre, tema, institución…" autocomplete="off"></label><label for="prov">Provincia<select id="prov"><option value="">Todas</option><option>Buenos Aires</option><option>Ciudad Autónoma de Buenos Aires</option><option>Córdoba</option><option>Jujuy</option><option>La Pampa</option><option>La Rioja</option><option>San Luis</option></select></label></div>
     </div>
   </section>
   <section>
@@ -333,6 +342,16 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="mail"><a data-u="belenalonso" data-d="humanas.unlpam.edu.ar">belenalonso [arroba] humanas.unlpam.edu.ar</a></p>
           <a class="perfil" href="https://orcid.org/0000-0003-3704-7673" target="_blank" rel="noopener">Ver perfil →</a>
         </article>
+        <article class="int" data-prov="Buenos Aires" data-texto="joel cuenca ungs universidad nacional de general sarmiento buenos aires san miguel literatura lgbtiqnb contemporanea literatura disidencia sexual narrativa">
+          <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/joel-cuenca.webp" alt="Joel Cuenca" loading="lazy" width="480" height="600"></div>
+          <h2 class="nombre">Joel Cuenca</h2>
+          <p class="inst">UNGS - Universidad Nacional de General Sarmiento</p>
+          <p class="lugar"><span>San Miguel, Buenos Aires</span></p>
+          <p class="frase">Literatura LGBTIQNB+ contemporánea.</p>
+          <ul class="claves"><li>literatura</li><li>disidencia sexual</li><li>narrativa</li></ul>
+          <p class="mail"><a data-u="jicuenca" data-d="campus.ungs.edu.ar">jicuenca [arroba] campus.ungs.edu.ar</a></p>
+          <a class="perfil" href="https://orcid.org/0009-0009-9407-3676" target="_blank" rel="noopener">Ver perfil →</a>
+        </article>
         <article class="int" data-prov="Buenos Aires" data-texto="cristian alejandro darouiche fh unmdp facultad de humanidades universidad nacional de mar del plata buenos aires mar del plata los significados y dinamicas amorosas y amicales de mujeres trans y travestis de la ciudad de mar del plata amor amistad sexualidad afectividad genero">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/cristian-alejandro-darouiche.webp" alt="Cristian Alejandro Darouiche" loading="lazy" width="480" height="600"></div>
           <h2 class="nombre">Cristian Alejandro Darouiche</h2>
@@ -343,6 +362,28 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <ul class="claves"><li>amor</li><li>amistad</li><li>sexualidad</li><li>afectividad</li><li>género</li></ul>
           <p class="mail"><a data-u="cristiandarou" data-d="gmail.com">cristiandarou [arroba] gmail.com</a></p>
           <a class="perfil" href="https://bicyt.conicet.gov.ar/fichas/p/cristian-alejandro-darouiche" target="_blank" rel="noopener">Ver perfil →</a>
+        </article>
+        <article class="int" data-prov="Jujuy" data-texto="elena espindola fhycs unju facultad de humanidades y ciencias sociales universidad nacional de jujuy jujuy yala la trama de un des encuentro accesibilidad de las personas trans de la provincia de jujuy a la salud publica 2012 2024 accesibilidad a la salud personas trans salud publica interseccionalidad ley de identidad de genero">
+          <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/elena-espindola.webp" alt="Elena Espíndola" loading="lazy" width="480" height="600"></div>
+          <h2 class="nombre">Elena Espíndola</h2>
+          <p class="pron">ella</p>
+          <p class="inst">FHYCS -UNJU - Facultad de Humanidades y Ciencias Sociales - Universidad Nacional de Jujuy</p>
+          <p class="lugar"><span>Yala, Jujuy</span></p>
+          <p class="frase">La trama de un (des) encuentro: Accesibilidad de las personas  trans de la provincia de Jujuy a la salud pública (2012 - 2024).</p>
+          <ul class="claves"><li>accesibilidad a la salud</li><li>personas trans</li><li>salud pública</li><li>interseccionalidad</li><li>ley de identidad de género</li></ul>
+          <p class="mail"><a data-u="epespindola" data-d="fhycs.unju.edu.ar">epespindola [arroba] fhycs.unju.edu.ar</a></p>
+          <a class="perfil" href="https://orcid.org/0009-0001-7216-1271" target="_blank" rel="noopener">Ver perfil →</a>
+        </article>
+        <article class="int" data-prov="Buenos Aires" data-texto="carlos jimenez ico instituto del conurbano ungs universidad nacional de general sarmiento buenos aires los polvorines estudio la construccion de las masculinidades desde un enfoque territorial e interseccional masculinidades desigualdades territorios epacialidad cuerpos">
+          <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/carlos-jimenez.webp" alt="Carlos Jimenez" loading="lazy" width="480" height="600"></div>
+          <h2 class="nombre">Carlos Jimenez</h2>
+          <p class="pron">el</p>
+          <p class="inst">ICO - Instituto del Conurbano / UNGS - Universidad Nacional de General Sarmiento</p>
+          <p class="lugar"><span>Los Polvorines, Buenos Aires</span></p>
+          <p class="frase">Estudio la construcción de las masculinidades desde un enfoque territorial e interseccional.</p>
+          <ul class="claves"><li>masculinidades</li><li>desigualdades</li><li>territorios</li><li>epacialidad</li><li>cuerpos</li></ul>
+          <p class="mail"><a data-u="cjimenez" data-d="campus.ungs.edu.ar">cjimenez [arroba] campus.ungs.edu.ar</a></p>
+          <a class="perfil" href="https://www.linkedin.com/in/carlos-jimenez-bb712775/" target="_blank" rel="noopener">Ver perfil →</a>
         </article>
         <article class="int" data-prov="Ciudad Autónoma de Buenos Aires" data-texto="maximiliano marentes eidaes unsam escuela interdisciplinaria de altos estudios sociales universidad nacional de san martin conicet consejo nacional de investigaciones cientificas y tecnicas ciudad autonoma de buenos aires caba investigo sobre los cruces entre intimidades y diversidades sexogenericas en especial relaciones de pareja y familias amor gay familias diversidad cultura">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/maximiliano-marentes.webp" alt="Maximiliano Marentes" loading="lazy" width="480" height="600"></div>
@@ -355,6 +396,17 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="mail"><a data-u="mmarentes" data-d="unsam.edu.ar">mmarentes [arroba] unsam.edu.ar</a></p>
           <a class="perfil" href="https://bicyt.conicet.gov.ar/fichas/p/maximiliano-marentes" target="_blank" rel="noopener">Ver perfil →</a>
         </article>
+        <article class="int" data-prov="Ciudad Autónoma de Buenos Aires" data-texto="leandro martinez unsam universidad nacional de san martin ciudad autonoma de buenos aires caba producciones audiovisuales plataformas y medios con participacion lgbtq lgbt medios audiovisuales plataformas de streaming">
+          <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/leandro-martinez.webp" alt="Leandro Martinez" loading="lazy" width="480" height="600"></div>
+          <h2 class="nombre">Leandro Martinez</h2>
+          <p class="pron">él</p>
+          <p class="inst">UNSAM - Universidad Nacional de San Martín</p>
+          <p class="lugar"><span>Ciudad Autónoma de Buenos Aires</span></p>
+          <p class="frase">Producciones audiovisuales, plataformas y medios con participación LGBTQ+.</p>
+          <ul class="claves"><li>LGBT</li><li>medios audiovisuales</li><li>plataformas de streaming</li></ul>
+          <p class="mail"><a data-u="lmartinez" data-d="unsam.edu.ar">lmartinez [arroba] unsam.edu.ar</a></p>
+          <a class="perfil" href="https://orcid.org/0000-0003-4066-7638" target="_blank" rel="noopener">Ver perfil →</a>
+        </article>
         <article class="int" data-prov="Córdoba" data-texto="eduardo mattio unc universidad nacional de cordoba cordoba cordoba me interesa el cruce entre disidencia sexual y giro afectivo en trayectorias homoeroticas emociones disidencia sexual teoria cuir homoerotismo">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/eduardo-mattio.webp" alt="Eduardo Mattio" loading="lazy" width="480" height="600"></div>
           <h2 class="nombre">Eduardo Mattio</h2>
@@ -364,6 +416,17 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Me interesa el cruce entre disidencia sexual y giro afectivo en trayectorias homoeróticas.</p>
           <ul class="claves"><li>emociones</li><li>disidencia sexual</li><li>teoría cuir</li><li>homoerotismo</li></ul>
           <p class="mail"><a data-u="eduardomattio" data-d="gmail.com">eduardomattio [arroba] gmail.com</a></p>
+        </article>
+        <article class="int" data-prov="San Luis" data-texto="victor martinez nunez licic fapsi unsl laboratorio de investigaciones en ciencias del comportamiento facultad de psicologia universidad nacional de san luis san luis san luis salud mental y sus determinaciones sociales genero y sexualidades salud mental determinaciones sociales genero sexualidades">
+          <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/victor-martinez-nunez.webp" alt="Victor Martinez Nuñez" loading="lazy" width="480" height="600"></div>
+          <h2 class="nombre">Victor Martinez Nuñez</h2>
+          <p class="pron">(él, ella)</p>
+          <p class="inst">LICIC/FaPsi/UNSL - Laboratorio de Investigaciones en Ciencias del Comportamiento, Facultad de Psicología, Universidad Nacional de San Luis</p>
+          <p class="lugar"><span>San Luis</span></p>
+          <p class="frase">Salud mental y sus determinaciones sociales: género y sexualidades.</p>
+          <ul class="claves"><li>salud mental</li><li>determinaciones sociales</li><li>género</li><li>sexualidades</li></ul>
+          <p class="mail"><a data-u="vamarnun" data-d="gmail.com">vamarnun [arroba] gmail.com</a></p>
+          <a class="perfil" href="https://orcid.org/0000-0003-2896-1295" target="_blank" rel="noopener">Ver perfil →</a>
         </article>
         <article class="int" data-prov="Ciudad Autónoma de Buenos Aires" data-texto="manu riveiro uba universidad de buenos aires facultad de ciencias sociales sociologia e instituto de investigaciones gino germani unaj universidad nacional arturo jauretche instituto de ciencias de la salud uai universidad abierta interamericana centro de altos estudios en ciencias sociales ciudad autonoma de buenos aires nunez estructura social clases sociales y relaciones sexo genenericas clase social estructura social ocupaciones genero lgbt">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><span class="ini" aria-hidden="true">MR</span></div>
@@ -391,7 +454,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="inst">UNC, Facultad de Ciencias Sociales, Instituto de Política, Sociedad e Intervención Social (IPSIS)</p>
           <p class="lugar"><span>Córdoba</span></p>
           <p class="frase">Investigo lo marica como subjetividad, política y cultura; ingago el campo de los derechos LGBTIQNB+.</p>
-          <ul class="claves"><li>maricas</li><li>subjetividades</li><li>lGBTIQNb+</li><li>políticas</li><li>derechos</li></ul>
+          <ul class="claves"><li>maricas</li><li>subjetividades</li><li>LGBTIQNb+</li><li>políticas</li><li>derechos</li></ul>
           <p class="mail"><a data-u="pascual.scarpino" data-d="unc.edu.ar">pascual.scarpino [arroba] unc.edu.ar</a></p>
           <a class="perfil" href="https://linktr.ee/pascual.scarpino" target="_blank" rel="noopener">Ver perfil →</a>
         </article>
