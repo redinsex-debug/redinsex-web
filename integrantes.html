@@ -59,6 +59,7 @@ p{margin:0}
 .franja span{background:var(--violeta);color:#fff;padding:.18em .45em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .franja b{font-weight:800}
 .franja + .franja{margin-top:18px}
+.franja.federal{margin:14px 0 clamp(22px,3vw,34px);max-width:none}
 
 /* botones */
 .btn{display:inline-flex;align-items:center;font-family:var(--f-display);font-weight:800;font-size:.82rem;letter-spacing:.06em;text-decoration:none;padding:.95em 1.3em;border:2px solid var(--tinta);border-radius:999px;background:var(--violeta);color:#fff;box-shadow:4px 4px 0 var(--tinta);transition:transform .15s,box-shadow .15s;cursor:pointer}
@@ -255,6 +256,8 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
 .buscar select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:1.8em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23a63981' stroke-width='2.4'/%3E%3C/svg%3E") right .3em center no-repeat}
 .buscar input:focus,.buscar select:focus{outline:none;border-color:var(--rosa-osc);background:rgba(246,103,158,.07)}
 .vacio{font-weight:700;padding-bottom:60px}
+.mas{display:flex;justify-content:center;padding-bottom:clamp(60px,8vw,100px);margin-top:-30px}
+.mas .btn[hidden]{display:none}
 @media (max-width:560px){
   .tarjetas{grid-template-columns:minmax(0,1fr);gap:24px}
   .int{display:grid;grid-template-columns:112px minmax(0,1fr);column-gap:14px;row-gap:4px;align-content:start;padding:10px 12px 14px}
@@ -364,6 +367,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
         </article>
       </div>
       <p class="vacio" id="vacio" hidden>No encontramos integrantes con esa búsqueda.</p>
+      <div class="mas"><button type="button" class="btn" id="mas" hidden>Ver más integrantes</button></div>
     </div>
   </section>
 </main>
@@ -379,14 +383,17 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
 <script>
 document.querySelectorAll('.mail a').forEach(function(a){var m=a.dataset.u+'@'+a.dataset.d;a.href='mailto:'+m;a.textContent=m;});
 (function(){
-  var q=document.getElementById('q'),pr=document.getElementById('prov'),v=document.getElementById('vacio'),items=[].slice.call(document.querySelectorAll('.int'));
+  var q=document.getElementById('q'),pr=document.getElementById('prov'),v=document.getElementById('vacio'),mas=document.getElementById('mas'),items=[].slice.call(document.querySelectorAll('.int'));
+  var PAGINA=24,limite=PAGINA;
   function n(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
   function f(){
-    var t=n(q.value.trim()).split(/\s+/).filter(Boolean),p=pr.value,k=0;
-    items.forEach(function(a){var ok=(!p||a.dataset.prov===p)&&t.every(function(w){return a.dataset.texto.indexOf(w)>-1;});a.hidden=!ok;if(ok)k++;});
+    var t=n(q.value.trim()).split(/\s+/).filter(Boolean),p=pr.value,filtrando=t.length>0||p!=='',k=0;
+    items.forEach(function(a,i){var ok=(!p||a.dataset.prov===p)&&t.every(function(w){return a.dataset.texto.indexOf(w)>-1;});if(!filtrando&&i>=limite)ok=false;a.hidden=!ok;if(ok)k++;});
     v.hidden=k>0;
+    mas.hidden=filtrando||items.length<=limite;
   }
-  q.addEventListener('input',f);pr.addEventListener('change',f);
+  mas.addEventListener('click',function(){limite+=PAGINA;f();});
+  q.addEventListener('input',f);pr.addEventListener('change',f);f();
 })();
 </script>
 </body>
