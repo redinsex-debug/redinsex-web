@@ -232,10 +232,14 @@ footer .redes a span{position:absolute;left:-9999px}
 .saltos a{font-family:var(--f-display);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:#fff;padding:.55em .9em;box-shadow:3px 4px 0 rgba(20,20,20,.22)}
 .saltos a:first-child{background:var(--violeta);transform:rotate(-1.5deg)}
 .saltos a:last-child{background:var(--verde-osc);transform:rotate(1.2deg)}
-.relato{max-width:68ch;margin-top:clamp(22px,3vw,32px);color:#fff;display:grid;gap:14px}
-.relato p{margin:0;line-height:1.6}
-.relato strong{font-weight:800}
-.cifras{list-style:none;margin:clamp(30px,4vw,44px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,22px)}
+.nota-relato{position:relative;background:#fff;color:var(--tinta);margin-top:clamp(34px,4.5vw,52px);padding:clamp(24px,3.4vw,40px) clamp(22px,3.6vw,44px);transform:rotate(.6deg);box-shadow:0 18px 30px -16px rgba(0,0,0,.65);column-count:2;column-gap:clamp(28px,4vw,48px);column-rule:2px dashed rgba(166,57,129,.25)}
+.nota-relato .cinta{top:-14px;left:36px;transform:rotate(-5deg)}
+.nota-relato .cinta.der{left:auto;right:36px;transform:rotate(4deg)}
+.nota-relato p{margin:0 0 14px;line-height:1.6}
+.nota-relato p:last-child{margin-bottom:0}
+.nota-relato .lead{column-span:all;font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--violeta);font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.3;margin-bottom:20px}
+@media (max-width:760px){.nota-relato{column-count:1;transform:rotate(.3deg)}}
+.cifras{list-style:none;margin:clamp(30px,4vw,44px) 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,2vw,22px)}
 .cifras li{background:#fff;color:var(--tinta);padding:14px 14px 16px;box-shadow:0 12px 22px -14px rgba(0,0,0,.6);display:flex;flex-direction:column;gap:2px;min-width:0}
 .cifras li:nth-child(odd){transform:rotate(-1deg)}.cifras li:nth-child(even){transform:rotate(.9deg)}.cifras li:nth-child(3n){transform:rotate(-.3deg)}
 .cifras .pre{font-size:.78rem;font-weight:700;color:#5b5560;min-height:1em}
@@ -286,13 +290,14 @@ footer .redes a span{position:absolute;left:-9999px}
     <div class="wrap">
       <h2 class="titulo">2° Congreso</h2>
       <p class="sub">Segundo Congreso Nacional de Estudios Interdisciplinares sobre Diversidad y Disidencias Sexuales y de Género · Córdoba · 24&nbsp;al&nbsp;26&nbsp;de&nbsp;junio&nbsp;de&nbsp;2026</p>
-      <div class="relato">
-        <p>Del 24 al 26 de junio nos encontramos casi 600 personas para pensar, debatir y construir colectivamente futuros sexo-disidentes.</p>
+      <ul class="cifras" aria-label="El 2° Congreso en números"><li><span class="pre">casi</span><b>600</b><span class="et">personas</span></li><li><span class="pre"></span><b>274</b><span class="et">trabajos</span></li><li><span class="pre"></span><b>48</b><span class="et">sesiones</span></li><li><span class="pre"></span><b>9</b><span class="et">ejes temáticos</span></li><li><span class="pre"></span><b>355</b><span class="et">expositorxs</span></li><li><span class="pre"></span><b>417</b><span class="et">autorxs</span></li><li><span class="pre"></span><b>28</b><span class="et">panelistas</span></li><li><span class="pre"></span><b>41</b><span class="et">coordinadorxs</span></li><li><span class="pre"></span><b>16</b><span class="et">provincias</span></li><li><span class="pre">asistentxs de</span><b>8</b><span class="et">países</span></li></ul>
+      <div class="nota-relato">
+        <span class="cinta" aria-hidden="true"></span><span class="cinta der" aria-hidden="true"></span>
+        <p class="lead">Nos encontramos casi 600 personas para pensar, debatir y construir colectivamente futuros sexo-disidentes.</p>
         <p>Durante tres jornadas intensas, los paneles y mesas centrales nos convocaron a reflexionar sobre algunos de los grandes desafíos de nuestro presente: el lugar de la investigación sobre diversidad y disidencia sexo-genérica, las estrategias de resistencia colectiva en el ámbito universitario y la gestión pública, el rol de las universidades, el avance de las derechas contra los derechos y las apuestas políticas para construir un futuro más justo para nuestras comunidades.</p>
         <p>Estos espacios reunieron, de manera profundamente federal, voces de activistas, investigadorxs y funcionarixs que compartieron diagnósticos, experiencias y desafíos que necesitamos seguir elaborando tanto en nuestros territorios como en red. Recibimos compañerxs de 8 países y de 16 provincias argentinas.</p>
         <p>En «Dame 10 y te lo cuento» conocimos 9 publicaciones académicas y autogestivas que evidencian la vitalidad de la producción crítica y activista LGBTIQ+. También vivimos momentos profundamente emotivos, como el homenaje a Mauro Cabral Grinspan y la presentación del libro de Ernesto Meccia.</p>
       </div>
-      <ul class="cifras" aria-label="El 2° Congreso en números"><li><span class="pre">casi</span><b>600</b><span class="et">personas</span></li><li><span class="pre"></span><b>274</b><span class="et">trabajos</span></li><li><span class="pre"></span><b>48</b><span class="et">sesiones</span></li><li><span class="pre"></span><b>9</b><span class="et">ejes temáticos</span></li><li><span class="pre"></span><b>355</b><span class="et">expositorxs presenciales</span></li><li><span class="pre"></span><b>417</b><span class="et">autorxs</span></li><li><span class="pre"></span><b>28</b><span class="et">panelistas</span></li><li><span class="pre">más de</span><b>170</b><span class="et">asistentes</span></li><li><span class="pre"></span><b>41</b><span class="et">coordinadorxs</span></li><li><span class="pre"></span><b>16</b><span class="et">provincias</span></li><li><span class="pre"></span><b>8</b><span class="et">países</span></li><li><span class="pre"></span><b>9</b><span class="et">publicaciones en «Dame 10 y te lo cuento»</span></li></ul>
       <div class="actas">
         <span class="cinta" aria-hidden="true"></span><span class="cinta der" aria-hidden="true"></span>
         <h3 class="collage" aria-label="Próximamente, las actas aquí"><span class="c1">Próxima</span><span class="c2">mente</span><span class="c6">las</span><span class="c3">ACTAS</span><span class="c4">aquí</span></h3>
@@ -337,8 +342,8 @@ footer .redes a span{position:absolute;left:-9999px}
         <span class="cinta" aria-hidden="true"></span><span class="cinta der" aria-hidden="true"></span>
         <h3 class="collage" aria-label="Las actas del primer congreso"><span class="c5">Las</span><span class="c6">ACTAS</span><span class="c2">del</span><span class="c4">primer</span><span class="c1">congreso</span></h3>
         <div>
-          <p>El sitio del 1° Congreso, con sus actas, está en Acta Académica.</p>
-          <a class="btn" href="https://www.aacademica.org/congresodiversidad" target="_blank" rel="noopener">IR A ACTA ACADÉMICA →</a>
+          <p>Las actas del 1° Congreso están publicadas en Acta Académica.</p>
+          <a class="btn" href="https://www.aacademica.org/congresodiversidad/tabs/proceedings" target="_blank" rel="noopener">VER LAS ACTAS →</a>
         </div>
       </div>
     </div>
