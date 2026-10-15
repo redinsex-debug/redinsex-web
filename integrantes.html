@@ -49,7 +49,7 @@ p{margin:0}
 .collage span{display:inline-block;padding:.08em .22em .12em;box-shadow:2px 3px 0 rgba(20,20,20,.18)}
 .c1{background:var(--tinta);color:#fff;font-family:"Archivo Black",sans-serif;transform:rotate(-2deg)}
 .c2{background:var(--rosa);color:var(--tinta);font-family:"DM Serif Display",serif;font-style:italic;transform:rotate(1.5deg)}
-.c3{background:#fff;color:var(--violeta);font-family:"Unbounded",sans-serif;font-weight:900;transform:rotate(-1deg)}
+.c3{background:var(--papel);color:var(--violeta);font-family:"Unbounded",sans-serif;font-weight:900;transform:rotate(-1deg)}
 .c4{background:var(--verde-cla);color:var(--tinta);font-family:"Courier Prime",monospace;font-weight:700;transform:rotate(2deg)}
 .c5{background:var(--violeta);color:#fff;font-family:"Archivo Black",sans-serif;transform:rotate(-1.5deg)}
 .c6{background:var(--amarillo);color:var(--tinta);font-family:"DM Serif Display",serif;transform:rotate(1deg)}
@@ -62,7 +62,7 @@ p{margin:0}
 .franja.federal{margin:14px 0 clamp(22px,3vw,34px);max-width:none}
 
 /* botones */
-.btn{display:inline-flex;align-items:center;font-family:var(--f-display);font-weight:800;font-size:.82rem;letter-spacing:.06em;text-decoration:none;padding:.95em 1.3em;border:2px solid var(--tinta);border-radius:999px;background:var(--violeta);color:#fff;box-shadow:4px 4px 0 var(--tinta);transition:transform .15s,box-shadow .15s;cursor:pointer}
+.btn{display:inline-flex;align-items:center;text-transform:uppercase;font-family:var(--f-display);font-weight:800;font-size:.82rem;letter-spacing:.06em;text-decoration:none;padding:.95em 1.3em;border:2px solid var(--tinta);border-radius:999px;background:var(--violeta);color:#fff;box-shadow:4px 4px 0 var(--tinta);transition:transform .15s,box-shadow .15s;cursor:pointer}
 .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--tinta)}
 .btn.alt{background:var(--verde-cla);color:var(--tinta)}
 
@@ -80,7 +80,7 @@ nav.menu a.sumarse{background:var(--violeta);color:#fff}
   .menu-mobile{display:block;position:relative}
   .menu-mobile summary{list-style:none;cursor:pointer;font-weight:800;font-size:.85rem;border:2px solid var(--tinta);padding:.35em .9em;border-radius:999px;background:var(--rosa-cla)}
   .menu-mobile summary::-webkit-details-marker{display:none}
-  .menu-mobile ul{position:absolute;right:0;top:calc(100% + 8px);background:var(--crema);border:2px solid var(--tinta);border-radius:14px;list-style:none;margin:0;padding:8px;min-width:210px;box-shadow:5px 5px 0 var(--violeta)}
+  .menu-mobile ul{position:absolute;right:0;top:calc(100% + 8px);background:var(--papel);border:2px solid var(--tinta);border-radius:14px;list-style:none;margin:0;padding:8px;min-width:210px;box-shadow:5px 5px 0 var(--violeta)}
   .menu-mobile a{display:block;padding:.5em .7em;text-decoration:none}
 }
 
@@ -90,12 +90,12 @@ nav.menu a.sumarse{background:var(--violeta);color:#fff}
 .hero .eyebrow{display:block;margin-bottom:22px;max-width:46ch}
 .hero .bajada{margin-top:26px;max-width:46ch;font-size:1.1rem}
 .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.foto-grupo{position:relative;margin:0;transform:rotate(1.8deg);background:#fff;padding:10px 10px 14px;box-shadow:0 18px 34px -16px rgba(0,0,0,.5)}
+.foto-grupo{position:relative;margin:0;transform:rotate(1.8deg);background:var(--papel);padding:10px 10px 14px;box-shadow:0 18px 34px -16px rgba(0,0,0,.5)}
 .foto-grupo img{display:block;width:100%;height:auto}
 .foto-grupo .cinta{top:-14px;left:30%;transform:rotate(-6deg)}
 .foto-grupo .cinta.b{left:auto;right:12%;transform:rotate(5deg)}
 .foto-grupo figcaption{font-size:.82rem;font-weight:600;padding-top:10px;color:#3a3a3a}
-.foto-grupo .sticker{position:absolute;left:-28px;top:-34px;width:clamp(96px,11vw,130px);aspect-ratio:1;background:#fff;border-radius:50%;padding:14px;display:grid;place-items:center;transform:rotate(-8deg);box-shadow:0 10px 18px -8px rgba(0,0,0,.4)}
+.foto-grupo .sticker{position:absolute;left:-28px;top:-34px;width:clamp(96px,11vw,130px);aspect-ratio:1;background:var(--papel);border-radius:50%;padding:14px;display:grid;place-items:center;transform:rotate(-8deg);box-shadow:0 10px 18px -8px rgba(0,0,0,.4)}
 .foto-grupo .sticker img{width:100%;height:auto}
 @media (max-width:860px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.foto-grupo{max-width:560px;justify-self:center;width:calc(100% - 20px)}.foto-grupo .sticker{left:-10px}}
 
@@ -111,12 +111,13 @@ nav.menu a.sumarse{background:var(--violeta);color:#fff}
 /* dónde estamos */
 .donde{padding-block:clamp(56px,8vw,100px);position:relative;overflow-x:clip}
 .donde .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:start}
-.mapa{position:sticky;top:90px;transform:rotate(-1.5deg);margin:0;background:#fff;padding:10px;box-shadow:0 14px 30px -14px rgba(0,0,0,.45)}
+.mapa{position:sticky;top:90px;transform:rotate(-1.5deg);margin:0;background:var(--papel);padding:10px;box-shadow:0 14px 30px -14px rgba(0,0,0,.45)}
 .mapa img{display:block;width:100%;height:auto}
 .mapa .cinta{top:-12px;left:42%;transform:rotate(3deg)}
 .provincias{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px;align-items:start}
-.prov{position:relative;background:#fff;box-shadow:0 10px 20px -12px rgba(0,0,0,.45);transform:rotate(-.6deg)}
-.prov:nth-child(even){transform:rotate(.5deg)}
+.prov{position:relative;background:var(--papel) url("arrugado.jpg") center/1200px auto;box-shadow:0 10px 20px -12px rgba(0,0,0,.45);transform:rotate(-.6deg)}
+.prov:nth-child(even){transform:rotate(.5deg);background-position:70% 30%}
+.prov:nth-child(3n){background-position:20% 80%}
 .prov:nth-child(3n){transform:rotate(-.2deg)}
 .prov[open]{grid-column:1/-1;transform:none;z-index:2}
 .prov summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:.8em 1em;font-family:var(--f-display);font-weight:800;font-size:1.02rem;text-transform:uppercase;letter-spacing:.06em;color:var(--violeta)}
@@ -137,14 +138,14 @@ nav.menu a.sumarse{background:var(--violeta);color:#fff}
 .congreso .titulo{color:#fff}
 .congreso .sub{color:#fff;font-weight:600;margin-top:12px;max-width:52ch}
 .placas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2.2vw,26px)}
-.placa{position:relative;margin:0;background:#fff;padding:7px;box-shadow:0 14px 26px -14px rgba(0,0,0,.6)}
+.placa{position:relative;margin:0;background:var(--papel);padding:7px;box-shadow:0 14px 26px -14px rgba(0,0,0,.6)}
 .placa img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
 .placa:nth-child(odd){transform:rotate(-1.4deg)}.placa:nth-child(even){transform:rotate(1.2deg)}
 .placa:nth-child(3n){transform:rotate(-.5deg)}
 .placa .cinta{top:-13px;left:50%;margin-left:-55px;transform:rotate(-3deg)}
 .subcongreso{font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#fff;font-size:clamp(1.2rem,2.4vw,1.6rem);margin-top:clamp(36px,5vw,56px)}
 .subcongreso + .placas{margin-top:22px}
-.actas{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(18px,3vw,36px);align-items:center;margin-top:clamp(32px,4.5vw,52px);background:#fff;padding:clamp(22px,3.4vw,40px);transform:rotate(-.8deg);box-shadow:0 18px 30px -16px rgba(0,0,0,.65)}
+.actas{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(18px,3vw,36px);align-items:center;margin-top:clamp(32px,4.5vw,52px);background:var(--papel) url("arrugado.jpg") center/1200px auto;padding:clamp(22px,3.4vw,40px);transform:rotate(-.8deg);box-shadow:0 18px 30px -16px rgba(0,0,0,.65)}
 .actas .cinta{top:-14px;left:28px;transform:rotate(-6deg)}
 .actas .cinta.der{left:auto;right:28px;transform:rotate(5deg)}
 .actas .collage{font-size:clamp(1.7rem,4.2vw,3.3rem)}
@@ -155,7 +156,7 @@ a.placa{display:block;cursor:zoom-in;transition:transform .2s,box-shadow .2s}
 a.placa:hover{transform:rotate(0) scale(1.03)!important;box-shadow:0 20px 34px -14px rgba(0,0,0,.7);z-index:2}
 .visor{border:0;padding:0;background:transparent;width:min(92vw,620px,calc(84vh * .8 + 16px));max-width:none;overflow:visible}
 .visor::backdrop{background:rgba(20,14,20,.86)}
-.visor img{display:block;width:100%;height:auto;max-height:84vh;object-fit:contain;background:#fff;padding:8px;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.visor img{display:block;width:100%;height:auto;max-height:84vh;object-fit:contain;background:var(--papel);padding:8px;box-shadow:0 20px 40px rgba(0,0,0,.5)}
 .visor p{color:#fff;font-weight:600;font-size:.92rem;margin-top:10px;text-align:center}
 .visor button{position:absolute;border:2px solid var(--tinta);background:var(--violeta);color:#fff;font:800 1.6rem/1 var(--f-texto);width:46px;height:46px;border-radius:50%;cursor:pointer;display:grid;place-items:center;box-shadow:3px 3px 0 var(--tinta)}
 .visor .v-cerrar{top:-18px;right:-18px;background:var(--rosa)}
@@ -167,32 +168,34 @@ a.placa:hover{transform:rotate(0) scale(1.03)!important;box-shadow:0 20px 34px -
 /* ciclo */
 .ciclo{background:var(--rosa);color:var(--tinta);padding-top:clamp(56px,8vw,96px)}
 .ciclo .cab{display:grid;gap:14px;max-width:900px}
+.ciclo .eyebrow{color:var(--tinta)}
 .ciclo h2{font-family:var(--f-display);font-size:clamp(1.55rem,6.6vw,4.2rem);font-weight:900;text-transform:uppercase;letter-spacing:.05em;line-height:1.05}
 .ciclo h2 span{display:block;white-space:nowrap}
 .ciclo .cab p{max-width:56ch;font-size:1.05rem}
 .onda{display:block;width:100%;height:clamp(60px,9vw,120px);margin-top:clamp(28px,4vw,48px)}
 .ciclo-cuerpo{background:var(--violeta);color:#fff;padding-block:0 clamp(56px,8vw,96px)}
 .encuentros{display:grid;gap:clamp(20px,3vw,32px)}
-.encuentro{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:clamp(18px,3vw,40px);padding:clamp(22px,3vw,32px);border:2px solid #fff;border-radius:28px;background:color-mix(in srgb,var(--violeta-osc) 35%,transparent)}
-.encuentro.prox{background:var(--crema) url("arrugado.jpg") center/1200px auto;color:var(--tinta);border-color:var(--tinta);box-shadow:8px 8px 0 var(--verde)}
-.cuando{display:grid;gap:6px;align-content:start}
-.cuando .dia{font-family:var(--f-display);font-weight:900;font-size:3.4rem;line-height:.9;letter-spacing:.04em;font-variant-numeric:tabular-nums}
-.cuando .mes{font-family:var(--f-display);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:.07em}
+.encuentro{position:relative;display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:clamp(18px,3vw,40px);padding:clamp(24px,3vw,34px);background:var(--papel) url("arrugado.jpg") center/1200px auto;color:var(--tinta);box-shadow:0 16px 28px -16px rgba(0,0,0,.6);transform:rotate(-.5deg)}
+.encuentro:nth-child(even){transform:rotate(.6deg);background-position:30% 70%}
+.encuentro > .cinta{top:-14px;left:40px;transform:rotate(-4deg)}
+.encuentro:nth-child(even) > .cinta{left:auto;right:40px;transform:rotate(3deg)}
+.cuando{display:grid;gap:6px;align-content:start;border-right:2px dashed rgba(166,57,129,.3);padding-right:clamp(12px,2vw,24px)}
+.cuando .dia{font-family:var(--f-display);font-weight:900;font-size:3.6rem;line-height:.9;letter-spacing:.04em;font-variant-numeric:tabular-nums;color:var(--violeta)}
+.cuando .mes{font-family:var(--f-display);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:.07em;color:var(--violeta-osc)}
 .cuando .hora{font-weight:600;font-size:.88rem}
-.estado-e{justify-self:start;font-weight:800;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:.3em .75em;border-radius:999px;border:1.5px solid currentColor;margin-top:6px}
-.prox .estado-e{background:var(--verde-cla);border-color:var(--tinta)}
+.estado-e{justify-self:start;font-family:var(--f-display);font-weight:800;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.35em .7em;margin-top:8px;background:#e9e3e7;color:var(--tinta);transform:rotate(-2deg)}
+.prox .estado-e{background:var(--verde-cla)}
 .encuentro blockquote{margin:0;font-style:italic;font-weight:700;font-size:clamp(1.15rem,2.2vw,1.55rem);line-height:1.3;text-wrap:balance}
 .encuentro .quien{margin-top:14px;font-size:1.15rem}
-.encuentro .meet{display:inline-flex;align-items:center;gap:.5em;margin-top:14px;font-weight:700;font-size:.82rem;padding:.35em .9em;border-radius:999px;background:color-mix(in srgb,#fff 22%,transparent)}
-.prox .meet{background:var(--rosa-cla)}
+.encuentro .meet{display:inline-flex;align-items:center;gap:.5em;margin-top:14px;font-weight:700;font-size:.82rem;padding:.35em .8em;background:var(--violeta);color:#fff}
 .meet i{width:10px;height:10px;border-radius:50%;background:var(--verde-cla)}
-@media (max-width:640px){.encuentro{grid-template-columns:minmax(0,1fr)}.cuando{grid-template-columns:auto 1fr;align-items:end;column-gap:14px}.cuando .dia{grid-row:span 2}}
+@media (max-width:640px){.encuentro{grid-template-columns:minmax(0,1fr)}.cuando{grid-template-columns:auto 1fr;align-items:end;column-gap:14px;border-right:0;border-bottom:2px dashed rgba(166,57,129,.3);padding:0 0 12px}.cuando .dia{grid-row:span 2}}
 
 /* sumate + contacto */
 .sumate{padding-block:clamp(64px,9vw,120px)}
 .sumate .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:start}
 .sumate .collage{margin-top:26px}
-form.contacto{position:relative;display:grid;gap:18px;background:#fff;padding:clamp(26px,3.4vw,40px) clamp(22px,3vw,36px) clamp(24px,3vw,32px);box-shadow:0 18px 34px -16px rgba(0,0,0,.45);transform:rotate(.6deg)}
+form.contacto{position:relative;display:grid;gap:18px;background:var(--papel) url("arrugado.jpg") center/1200px auto;padding:clamp(26px,3.4vw,40px) clamp(22px,3vw,36px) clamp(24px,3vw,32px);box-shadow:0 18px 34px -16px rgba(0,0,0,.45);transform:rotate(.6deg)}
 form.contacto > .cinta{top:-14px;left:50%;margin-left:-55px;transform:rotate(-2deg)}
 form.contacto label{font-family:var(--f-display);font-weight:800;font-size:.86rem;letter-spacing:.07em;text-transform:uppercase;color:var(--violeta);display:grid;gap:4px}
 form.contacto input,form.contacto textarea,form.contacto select{font-family:var(--f-texto);font-size:1rem;letter-spacing:0;text-transform:none;font-weight:400;padding:.55em .2em;border:0;border-bottom:2px solid var(--violeta);border-radius:0;background:transparent;color:var(--tinta);width:100%;transition:border-color .15s,background .15s}
@@ -218,7 +221,7 @@ footer p{font-weight:600;font-size:.85rem}
 .redes a{display:inline-flex;align-items:center;gap:.55em;text-decoration:none;font-family:var(--f-display);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding:.6em .9em;color:#fff;box-shadow:3px 4px 0 rgba(20,20,20,.22);transition:transform .15s}
 .redes svg{width:1.25em;height:1.25em;flex:none;fill:currentColor}
 .redes li:nth-child(1) a{background:var(--violeta);transform:rotate(-2deg)}
-.redes li:nth-child(2) a{background:var(--rosa-osc);transform:rotate(1.5deg)}
+.redes li:nth-child(2) a{background:#b42a60;transform:rotate(1.5deg)}
 .redes li:nth-child(3) a{background:var(--verde-osc);transform:rotate(-1deg)}
 .redes a:hover{transform:rotate(0) scale(1.06)}
 footer .redes{gap:10px}
@@ -232,14 +235,18 @@ footer .redes a span{position:absolute;left:-9999px}
 .saltos a{font-family:var(--f-display);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:#fff;padding:.55em .9em;box-shadow:3px 4px 0 rgba(20,20,20,.22)}
 .saltos a:first-child{background:var(--violeta);transform:rotate(-1.5deg)}
 .saltos a:last-child{background:var(--verde-osc);transform:rotate(1.2deg)}
+.arriba{position:fixed;right:16px;bottom:16px;z-index:25;width:46px;height:46px;display:grid;place-items:center;background:var(--violeta);color:#fff;text-decoration:none;font-weight:800;font-size:1.3rem;box-shadow:3px 4px 0 var(--tinta);transform:rotate(-3deg);opacity:0;pointer-events:none;transition:opacity .2s}
+.arriba.ver{opacity:1;pointer-events:auto}
+.arriba:hover{background:var(--rosa-osc)}
+.arriba:focus-visible{opacity:1;pointer-events:auto;outline:3px solid var(--verde);outline-offset:3px}
 
 /* página de integrantes */
 nav.menu a[aria-current]{background:var(--verde-cla)}
 .int-intro{padding-block:clamp(40px,6vw,72px) 8px}
 .int-intro .franja{max-width:56ch;margin-top:18px}
 .tarjetas{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:clamp(26px,3.4vw,40px);padding-block:44px clamp(60px,8vw,100px)}
-.int{position:relative;background:#fff;padding:12px 14px 18px;box-shadow:0 14px 26px -16px rgba(0,0,0,.55);display:flex;flex-direction:column;gap:6px;min-width:0}
-.int:nth-child(4n+1){transform:rotate(-1.1deg)}.int:nth-child(4n+2){transform:rotate(.9deg)}.int:nth-child(4n+3){transform:rotate(-.4deg)}.int:nth-child(4n){transform:rotate(1.3deg)}
+.int{position:relative;background:var(--papel) url("arrugado.jpg") center/1200px auto;padding:12px 14px 18px;box-shadow:0 14px 26px -16px rgba(0,0,0,.55);display:flex;flex-direction:column;gap:6px;min-width:0}
+.int:nth-child(4n+1){transform:rotate(-1.1deg)}.int:nth-child(4n+2){transform:rotate(.9deg);background-position:70% 20%}.int:nth-child(3n){background-position:15% 85%}.int:nth-child(4n+3){transform:rotate(-.4deg)}.int:nth-child(4n){transform:rotate(1.3deg)}
 .int .foto{position:relative;margin-bottom:8px}
 .int .foto img,.int .ini{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
 .int .ini{display:grid;place-items:center;background:var(--violeta);color:#fff;font-family:var(--f-display);font-weight:800;font-size:clamp(3rem,7vw,4.5rem);letter-spacing:.06em}
@@ -255,7 +262,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
 .claves li{background:var(--violeta);color:#fff;font-size:.74rem;font-weight:600;padding:.15em .5em}
 .int .mail{margin:8px 0 0;font-size:.84rem;font-weight:600;overflow-wrap:anywhere}
 .int .mail a{color:var(--violeta-osc);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:2px}
-.int .perfil{margin-top:auto;padding-top:8px;align-self:flex-start;font-family:var(--f-display);font-weight:800;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--rosa-osc);text-decoration:none}
+.int .perfil{margin-top:auto;padding-top:8px;align-self:flex-start;font-family:var(--f-display);font-weight:800;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:#b42a60;text-decoration:none}
 .int .perfil:hover{text-decoration:underline}
 .int[hidden]{display:none}
 .buscar{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px 26px;align-items:end}
@@ -281,6 +288,16 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
 .prueba button{font:inherit;border:2px solid var(--tinta);background:#fff;padding:.2em .6em;cursor:pointer}
 .prueba button[aria-pressed=true]{background:var(--violeta);color:#fff}
 </style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="REDINSEX">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Integrantes · REDINSEX">
+<meta property="og:description" content="Quiénes investigan en la Red Argentina de Investigadorxs en Diversidades y Disidencias Sexogenéricas, desde dónde y sobre qué.">
+<meta property="og:url" content="https://redinsex.ar/integrantes.html">
+<meta property="og:image" content="https://redinsex.ar/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 <header class="top">
@@ -291,7 +308,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
         <li><a href="index.html#la-red">La red</a></li>
         <li><a href="index.html#donde">Dónde estamos</a></li>
         <li><a href="congresos.html">Congresos</a></li>
-        <li><a href="index.html#actividades">Actividades</a></li>
+        <li><a href="index.html#actividades">Ciclo de encuentros virtuales</a></li>
         <li><a href="integrantes.html" aria-current="page">Integrantes</a></li>
         <li><a class="sumarse" href="index.html#sumate">Sumate</a></li>
       </ul>
@@ -302,7 +319,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
         <li><a href="index.html#la-red">La red</a></li>
         <li><a href="index.html#donde">Dónde estamos</a></li>
         <li><a href="congresos.html">Congresos</a></li>
-        <li><a href="index.html#actividades">Actividades</a></li>
+        <li><a href="index.html#actividades">Ciclo de encuentros virtuales</a></li>
         <li><a href="integrantes.html" aria-current="page">Integrantes</a></li>
         <li><a href="index.html#sumate">Sumate</a></li>
       </ul>
@@ -330,7 +347,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Investigo masculinidades, cuerpos y orientaciones sexuales de varones que participan del mercado sexual digital.</p>
           <ul class="claves"><li>masculinidades</li><li>cuerpos</li><li>orientaciones sexuales</li><li>mercado sexual</li><li>antropología</li></ul>
           <p class="mail"><a data-u="mail" data-d="ezequielaguilera.com.ar">mail [arroba] ezequielaguilera.com.ar</a></p>
-          <a class="perfil" href="https://ezequielaguilera.com.ar/" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://ezequielaguilera.com.ar/" target="_blank" rel="noopener">Sitio web →</a>
         </article>
         <article class="int" data-prov="La Pampa" data-texto="belen alonso universidad nacional de la pampa unlpam la pampa santa rosa experiencias de mujeres trans de trabajo formal en la administracion publica pampeana trabajo formal cupo laboral trans transfeminismo ciudadania laboral">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/belen-alonso.webp" alt="Belén Alonso" loading="lazy" width="480" height="600"></div>
@@ -340,7 +357,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Experiencias de mujeres trans* de trabajo formal en la administración pública pampeana.</p>
           <ul class="claves"><li>trabajo formal</li><li>cupo laboral trans</li><li>transfeminismo</li><li>ciudadanía laboral</li></ul>
           <p class="mail"><a data-u="belenalonso" data-d="humanas.unlpam.edu.ar">belenalonso [arroba] humanas.unlpam.edu.ar</a></p>
-          <a class="perfil" href="https://orcid.org/0000-0003-3704-7673" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://orcid.org/0000-0003-3704-7673" target="_blank" rel="noopener">ORCID →</a>
         </article>
         <article class="int" data-prov="Buenos Aires" data-texto="joel cuenca ungs universidad nacional de general sarmiento buenos aires san miguel literatura lgbtiqnb contemporanea literatura disidencia sexual narrativa">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/joel-cuenca.webp" alt="Joel Cuenca" loading="lazy" width="480" height="600"></div>
@@ -350,7 +367,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Literatura LGBTIQNB+ contemporánea.</p>
           <ul class="claves"><li>literatura</li><li>disidencia sexual</li><li>narrativa</li></ul>
           <p class="mail"><a data-u="jicuenca" data-d="campus.ungs.edu.ar">jicuenca [arroba] campus.ungs.edu.ar</a></p>
-          <a class="perfil" href="https://orcid.org/0009-0009-9407-3676" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://orcid.org/0009-0009-9407-3676" target="_blank" rel="noopener">ORCID →</a>
         </article>
         <article class="int" data-prov="Buenos Aires" data-texto="cristian alejandro darouiche fh unmdp facultad de humanidades universidad nacional de mar del plata buenos aires mar del plata los significados y dinamicas amorosas y amicales de mujeres trans y travestis de la ciudad de mar del plata amor amistad sexualidad afectividad genero">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/cristian-alejandro-darouiche.webp" alt="Cristian Alejandro Darouiche" loading="lazy" width="480" height="600"></div>
@@ -361,7 +378,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Los significados y dinámicas amorosas y amicales de mujeres trans y travestis de la ciudad de Mar del Plata.</p>
           <ul class="claves"><li>amor</li><li>amistad</li><li>sexualidad</li><li>afectividad</li><li>género</li></ul>
           <p class="mail"><a data-u="cristiandarou" data-d="gmail.com">cristiandarou [arroba] gmail.com</a></p>
-          <a class="perfil" href="https://bicyt.conicet.gov.ar/fichas/p/cristian-alejandro-darouiche" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://bicyt.conicet.gov.ar/fichas/p/cristian-alejandro-darouiche" target="_blank" rel="noopener">Perfil CONICET →</a>
         </article>
         <article class="int" data-prov="Jujuy" data-texto="elena espindola fhycs unju facultad de humanidades y ciencias sociales universidad nacional de jujuy jujuy yala la trama de un des encuentro accesibilidad de las personas trans de la provincia de jujuy a la salud publica 2012 2024 accesibilidad a la salud personas trans salud publica interseccionalidad ley de identidad de genero">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/elena-espindola.webp" alt="Elena Espíndola" loading="lazy" width="480" height="600"></div>
@@ -372,7 +389,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">La trama de un (des) encuentro: Accesibilidad de las personas  trans de la provincia de Jujuy a la salud pública (2012 - 2024).</p>
           <ul class="claves"><li>accesibilidad a la salud</li><li>personas trans</li><li>salud pública</li><li>interseccionalidad</li><li>ley de identidad de género</li></ul>
           <p class="mail"><a data-u="epespindola" data-d="fhycs.unju.edu.ar">epespindola [arroba] fhycs.unju.edu.ar</a></p>
-          <a class="perfil" href="https://orcid.org/0009-0001-7216-1271" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://orcid.org/0009-0001-7216-1271" target="_blank" rel="noopener">ORCID →</a>
         </article>
         <article class="int" data-prov="Córdoba" data-texto="valentina grosso ferrero universidad nacional de cordoba cordoba freyre trayectorias rupturas y continuidades de los partidos politicos ante las ampliaciones de derechos sexuales y reproductivos en argentina partidos politicos historia derechos sexuales y reproductivos matrimonio igualitario politica publica">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><span class="ini" aria-hidden="true">VF</span></div>
@@ -393,7 +410,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Estudio la construcción de las masculinidades desde un enfoque territorial e interseccional.</p>
           <ul class="claves"><li>masculinidades</li><li>desigualdades</li><li>territorios</li><li>epacialidad</li><li>cuerpos</li></ul>
           <p class="mail"><a data-u="cjimenez" data-d="campus.ungs.edu.ar">cjimenez [arroba] campus.ungs.edu.ar</a></p>
-          <a class="perfil" href="https://www.linkedin.com/in/carlos-jimenez-bb712775/" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://www.linkedin.com/in/carlos-jimenez-bb712775/" target="_blank" rel="noopener">LinkedIn →</a>
         </article>
         <article class="int" data-prov="Ciudad Autónoma de Buenos Aires" data-texto="maximiliano marentes eidaes unsam escuela interdisciplinaria de altos estudios sociales universidad nacional de san martin conicet consejo nacional de investigaciones cientificas y tecnicas ciudad autonoma de buenos aires caba investigo sobre los cruces entre intimidades y diversidades sexogenericas en especial relaciones de pareja y familias amor gay familias diversidad cultura">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/maximiliano-marentes.webp" alt="Maximiliano Marentes" loading="lazy" width="480" height="600"></div>
@@ -404,7 +421,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Investigo sobre los cruces entre intimidades y diversidades sexogenéricas, en especial relaciones de pareja y familias.</p>
           <ul class="claves"><li>amor</li><li>gay</li><li>familias</li><li>diversidad</li><li>cultura</li></ul>
           <p class="mail"><a data-u="mmarentes" data-d="unsam.edu.ar">mmarentes [arroba] unsam.edu.ar</a></p>
-          <a class="perfil" href="https://bicyt.conicet.gov.ar/fichas/p/maximiliano-marentes" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://bicyt.conicet.gov.ar/fichas/p/maximiliano-marentes" target="_blank" rel="noopener">Perfil CONICET →</a>
         </article>
         <article class="int" data-prov="Ciudad Autónoma de Buenos Aires" data-texto="leandro martinez unsam universidad nacional de san martin ciudad autonoma de buenos aires caba producciones audiovisuales plataformas y medios con participacion lgbtq lgbt medios audiovisuales plataformas de streaming">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/leandro-martinez.webp" alt="Leandro Martinez" loading="lazy" width="480" height="600"></div>
@@ -415,7 +432,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Producciones audiovisuales, plataformas y medios con participación LGBTQ+.</p>
           <ul class="claves"><li>LGBT</li><li>medios audiovisuales</li><li>plataformas de streaming</li></ul>
           <p class="mail"><a data-u="lmartinez" data-d="unsam.edu.ar">lmartinez [arroba] unsam.edu.ar</a></p>
-          <a class="perfil" href="https://orcid.org/0000-0003-4066-7638" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://orcid.org/0000-0003-4066-7638" target="_blank" rel="noopener">ORCID →</a>
         </article>
         <article class="int" data-prov="San Luis" data-texto="victor martinez nunez licic fapsi unsl laboratorio de investigaciones en ciencias del comportamiento facultad de psicologia universidad nacional de san luis san luis san luis salud mental y sus determinaciones sociales genero y sexualidades salud mental determinaciones sociales genero sexualidades">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/victor-martinez-nunez.webp" alt="Victor Martinez Nuñez" loading="lazy" width="480" height="600"></div>
@@ -426,7 +443,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Salud mental y sus determinaciones sociales: género y sexualidades.</p>
           <ul class="claves"><li>salud mental</li><li>determinaciones sociales</li><li>género</li><li>sexualidades</li></ul>
           <p class="mail"><a data-u="vamarnun" data-d="gmail.com">vamarnun [arroba] gmail.com</a></p>
-          <a class="perfil" href="https://orcid.org/0000-0003-2896-1295" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://orcid.org/0000-0003-2896-1295" target="_blank" rel="noopener">ORCID →</a>
         </article>
         <article class="int" data-prov="Córdoba" data-texto="eduardo mattio unc universidad nacional de cordoba cordoba cordoba me interesa el cruce entre disidencia sexual y giro afectivo en trayectorias homoeroticas emociones disidencia sexual teoria cuir homoerotismo">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/eduardo-mattio.webp" alt="Eduardo Mattio" loading="lazy" width="480" height="600"></div>
@@ -466,7 +483,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Investigo lo marica como subjetividad, política y cultura; ingago el campo de los derechos LGBTIQNB+.</p>
           <ul class="claves"><li>maricas</li><li>subjetividades</li><li>LGBTIQNb+</li><li>políticas</li><li>derechos</li></ul>
           <p class="mail"><a data-u="pascual.scarpino" data-d="unc.edu.ar">pascual.scarpino [arroba] unc.edu.ar</a></p>
-          <a class="perfil" href="https://linktr.ee/pascual.scarpino" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://linktr.ee/pascual.scarpino" target="_blank" rel="noopener">Linktree →</a>
         </article>
         <article class="int" data-prov="Ciudad Autónoma de Buenos Aires" data-texto="matias soich conicet consejo nacional de investigaciones cientificas y tecnicas ciudad autonoma de buenos aires investigo la construccion de diversas identidades de genero desde el analisis critico del discurso y la filosofia identidad de genero analisis del discurso representaciones discursivas metafora devenir">
           <div class="foto"><span class="cinta" aria-hidden="true"></span><img src="integrantes/matias-soich.webp" alt="Matías Soich" loading="lazy" width="480" height="600"></div>
@@ -477,7 +494,7 @@ nav.menu a[aria-current]{background:var(--verde-cla)}
           <p class="frase">Investigo la construcción de diversas identidades de género desde el análisis crítico del discurso y la filosofía.</p>
           <ul class="claves"><li>identidad de género</li><li>análisis del discurso</li><li>representaciones discursivas</li><li>metáfora</li><li>devenir</li></ul>
           <p class="mail"><a data-u="matias.soich" data-d="gmail.com">matias.soich [arroba] gmail.com</a></p>
-          <a class="perfil" href="https://linktr.ee/matisoich" target="_blank" rel="noopener">Ver perfil →</a>
+          <a class="perfil" href="https://linktr.ee/matisoich" target="_blank" rel="noopener">Linktree →</a>
         </article>
       </div>
       <p class="vacio" id="vacio" hidden>No encontramos integrantes con esa búsqueda.</p>
@@ -509,6 +526,10 @@ document.querySelectorAll('.mail a').forEach(function(a){var m=a.dataset.u+'@'+a
   mas.addEventListener('click',function(){limite+=PAGINA;f();});
   q.addEventListener('input',f);pr.addEventListener('change',f);f();
 })();
+</script>
+<aside aria-label="Volver arriba"><a class="arriba" href="#inicio" aria-label="Volver arriba">↑</a></aside>
+<script>
+(function(){var a=document.querySelector('.arriba');if(!a)return;function f(){a.classList.toggle('ver',window.scrollY>900);}window.addEventListener('scroll',f,{passive:true});f();})();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f850054670c94b97901967555125c911"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
