@@ -67,21 +67,27 @@ p{margin:0}
 .btn.alt{background:var(--verde-cla);color:var(--tinta)}
 
 /* cabecera */
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--papel) 90%,transparent);backdrop-filter:blur(6px);border-bottom:2px solid var(--tinta)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
-.top .logo img{height:40px;width:auto;display:block}
-nav.menu ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:nowrap}
-nav.menu a{display:block;white-space:nowrap;text-decoration:none;font-weight:600;font-size:.92rem;padding:.4em .75em;border-radius:999px}
-nav.menu a:hover{background:var(--verde-cla)}
-nav.menu a.sumarse{background:var(--violeta);color:#fff}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--violeta) url("/grano.png") 0 0/600px 600px;color:#fff}
+header.top::after{content:"";position:absolute;left:0;right:0;top:100%;height:9px;background:var(--violeta);clip-path:polygon(0 0,100% 0,100% 30%,97.7% 21%,96.3% 24%,94.7% 16%,91.8% 34%,88.7% 23%,86.0% 53%,84.2% 1%,81.1% 40%,78.0% 49%,75.4% 2%,73.3% 10%,71.4% 13%,69.0% 42%,67.3% 3%,65.9% 50%,63.6% 18%,60.9% 20%,59.2% 35%,57.6% 23%,56.0% 55%,54.1% 26%,51.8% 15%,49.4% 3%,48.1% 45%,46.3% 9%,44.2% 33%,42.2% 28%,39.3% 49%,36.9% 50%,35.1% 30%,32.2% 51%,30.8% 26%,29.3% 28%,26.7% 33%,25.3% 48%,22.4% 40%,20.0% 17%,18.4% 44%,15.6% 46%,12.5% 12%,11.1% 9%,9.4% 30%,7.7% 42%,4.9% 50%,2.9% 4%,1.4% 22%,0.0% 13%);pointer-events:none}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:9px}
+.top .logo{display:block;background:var(--papel);padding:5px 11px 6px;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--rosa)}
+.top .logo img{height:32px;width:auto;display:block}
+nav.menu ul{list-style:none;display:flex;align-items:center;gap:2px;margin:0;padding:0;flex-wrap:nowrap}
+nav.menu a{display:block;white-space:nowrap;text-decoration:none;font-family:var(--f-display);font-weight:800;font-size:.76rem;letter-spacing:.07em;text-transform:uppercase;color:#fff;padding:.5em .62em}
+nav.menu a:hover{background:var(--amarillo);color:var(--tinta)}
+nav.menu a[aria-current]{background:var(--verde-cla);color:var(--tinta)}
+nav.menu a.sumarse{background:var(--rosa);color:var(--tinta);margin-left:8px;transform:rotate(-2.5deg);box-shadow:3px 3px 0 var(--tinta)}
+nav.menu a.sumarse:hover{background:var(--amarillo);transform:none}
+nav.menu a:focus-visible,.menu-mobile summary:focus-visible{outline:3px solid var(--amarillo);outline-offset:2px}
 .menu-mobile{display:none}
-@media (max-width:1080px){
+@media (max-width:1020px){
   nav.menu{display:none}
   .menu-mobile{display:block;position:relative}
-  .menu-mobile summary{list-style:none;cursor:pointer;font-weight:800;font-size:.85rem;border:2px solid var(--tinta);padding:.35em .9em;border-radius:999px;background:var(--rosa-cla)}
+  .menu-mobile summary{list-style:none;cursor:pointer;font-family:var(--f-display);font-weight:800;font-size:.8rem;letter-spacing:.07em;text-transform:uppercase;padding:.45em .9em;background:var(--amarillo);color:var(--tinta);transform:rotate(-2deg);box-shadow:3px 3px 0 var(--tinta)}
   .menu-mobile summary::-webkit-details-marker{display:none}
-  .menu-mobile ul{position:absolute;right:0;top:calc(100% + 8px);background:var(--papel);border:2px solid var(--tinta);border-radius:14px;list-style:none;margin:0;padding:8px;min-width:210px;box-shadow:5px 5px 0 var(--violeta)}
-  .menu-mobile a{display:block;padding:.5em .7em;text-decoration:none}
+  .menu-mobile ul{position:absolute;right:0;top:calc(100% + 14px);background:var(--papel);border:2px solid var(--tinta);list-style:none;margin:0;padding:8px;min-width:240px;box-shadow:5px 5px 0 var(--rosa)}
+  .menu-mobile a{display:block;padding:.55em .7em;text-decoration:none;color:var(--tinta);font-family:var(--f-display);font-weight:800;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+  .menu-mobile a:hover{background:var(--amarillo)}
 }
 
 /* inicio */
@@ -100,7 +106,9 @@ nav.menu a.sumarse{background:var(--violeta);color:#fff}
 @media (max-width:860px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.foto-grupo{max-width:560px;justify-self:center;width:calc(100% - 20px)}.foto-grupo .sticker{left:-10px}}
 
 /* la red */
-.red{position:relative;padding-block:clamp(56px,8vw,100px);border-block:22px solid var(--violeta)}
+.red{position:relative;padding-block:calc(clamp(56px,8vw,100px) + 22px)}
+.red::before,.red::after{content:"";position:absolute;left:0;right:0;height:22px;background:var(--violeta) url("/grano.png") 0 0/600px 600px}
+.red::before{top:0}.red::after{bottom:0}
 .red .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(36px,6vw,80px);align-items:start}
 @media (max-width:820px){.red .grid{grid-template-columns:minmax(0,1fr)}}
 
@@ -245,6 +253,41 @@ footer .redes a span{position:absolute;left:-9999px}
 .arriba.ver{opacity:1;pointer-events:auto}
 .arriba:hover{background:var(--rosa-osc)}
 .arriba:focus-visible{opacity:1;pointer-events:auto;outline:3px solid var(--verde);outline-offset:3px}
+/* ===== prueba riso 2: un solo lenguaje =====
+   Regla: todo es papel impreso en tintas planas. Sin sombras difusas:
+   la "profundidad" es siempre un desplazamiento de tinta (registro corrido). */
+:root{--off:5px}
+/* grano de tinta en los bloques de color */
+.riso{position:relative;isolation:isolate}
+.riso::after{content:"";position:absolute;inset:0;background:url("/grano.png") 0 0/600px 600px;pointer-events:none;z-index:1;mix-blend-mode:screen}
+.riso .wrap{position:relative;z-index:2}
+/* títulos: doble impresión corrida */
+.titulo{text-shadow:.045em .035em 0 rgba(246,103,158,.75)}
+.congreso .titulo{text-shadow:.045em .035em 0 rgba(242,230,0,.55)}
+.ciclo h2{text-shadow:.045em .04em 0 rgba(242,230,0,.85)}
+/* sombras difusas -> tinta corrida */
+.foto-grupo{box-shadow:var(--off) var(--off) 0 var(--rosa)}
+.mapa{box-shadow:var(--off) var(--off) 0 var(--verde-cla)}
+.prov{box-shadow:4px 4px 0 var(--rosa-cla);transform:none!important}
+.placa{box-shadow:var(--off) var(--off) 0 var(--rosa)}
+a.placa:hover{box-shadow:8px 8px 0 var(--amarillo)}
+.actas{box-shadow:7px 7px 0 var(--rosa);transform:none}
+.encuentro.prox{box-shadow:7px 7px 0 var(--verde-cla);transform:none}
+form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
+.collage span{box-shadow:3px 3px 0 rgba(20,20,20,.85)}
+.redes a{box-shadow:3px 3px 0 var(--tinta)}
+/* cinta solo para pegar fotos */
+.actas .cinta,.encuentro > .cinta,form.contacto > .cinta{display:none}
+/* botones: etiquetas de papel con tinta corrida */
+.btn{border:0;border-radius:0;box-shadow:4px 4px 0 var(--rosa);transform:rotate(-1deg)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--rosa)}
+.btn.alt{box-shadow:4px 4px 0 var(--violeta);transform:rotate(1deg)}
+.btn.alt:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--violeta)}
+.arriba{box-shadow:3px 3px 0 var(--rosa)}
+/* tramas de puntos: un solo recurso gráfico extra */
+.trama{position:absolute;pointer-events:none;border-radius:50%;background:radial-gradient(circle,var(--c,#f6679e) 34%,transparent 36%) 0 0/12px 12px;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+@media (max-width:860px){.hero .trama{opacity:.45}}
 .e404{padding-block:clamp(56px,9vw,120px)}
 .e404 .collage{font-size:clamp(2.2rem,7vw,5rem)}
 .e404 .franja{margin-top:clamp(24px,3vw,36px);max-width:52ch}
