@@ -70,12 +70,12 @@ p{margin:0}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--papel) 90%,transparent);backdrop-filter:blur(6px);border-bottom:2px solid var(--tinta)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
 .top .logo img{height:40px;width:auto;display:block}
-nav.menu ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:wrap}
-nav.menu a{display:block;text-decoration:none;font-weight:600;font-size:.92rem;padding:.4em .75em;border-radius:999px}
+nav.menu ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:nowrap}
+nav.menu a{display:block;white-space:nowrap;text-decoration:none;font-weight:600;font-size:.92rem;padding:.4em .75em;border-radius:999px}
 nav.menu a:hover{background:var(--verde-cla)}
 nav.menu a.sumarse{background:var(--violeta);color:#fff}
 .menu-mobile{display:none}
-@media (max-width:920px){
+@media (max-width:1080px){
   nav.menu{display:none}
   .menu-mobile{display:block;position:relative}
   .menu-mobile summary{list-style:none;cursor:pointer;font-weight:800;font-size:.85rem;border:2px solid var(--tinta);padding:.35em .9em;border-radius:999px;background:var(--rosa-cla)}
@@ -115,9 +115,8 @@ nav.menu a.sumarse{background:var(--violeta);color:#fff}
 .mapa img{display:block;width:100%;height:auto}
 .mapa .cinta{top:-12px;left:42%;transform:rotate(3deg)}
 .provincias{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px;align-items:start}
-.prov{position:relative;background:var(--papel) url("/arrugado.jpg") center/1200px auto;box-shadow:0 10px 20px -12px rgba(0,0,0,.45);transform:rotate(-.6deg)}
-.prov:nth-child(even){transform:rotate(.5deg);background-position:70% 30%}
-.prov:nth-child(3n){background-position:20% 80%}
+.prov{position:relative;background:var(--papel);box-shadow:0 10px 20px -12px rgba(0,0,0,.45);transform:rotate(-.6deg)}
+.prov:nth-child(even){transform:rotate(.5deg)}
 .prov:nth-child(3n){transform:rotate(-.2deg)}
 .prov[open]{grid-column:1/-1;transform:none;z-index:2}
 .prov summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:.8em 1em;font-family:var(--f-display);font-weight:800;font-size:1.02rem;text-transform:uppercase;letter-spacing:.06em;color:var(--violeta)}
@@ -177,6 +176,13 @@ a.placa:hover{transform:rotate(0) scale(1.03)!important;box-shadow:0 20px 34px -
 .encuentros{display:grid;gap:clamp(20px,3vw,32px)}
 .encuentro{position:relative;display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:clamp(18px,3vw,40px);padding:clamp(24px,3vw,34px);background:var(--papel) url("/arrugado.jpg") center/1200px auto;color:var(--tinta);box-shadow:0 16px 28px -16px rgba(0,0,0,.6);transform:rotate(-.5deg)}
 .encuentro:nth-child(even){transform:rotate(.6deg);background-position:30% 70%}
+.encuentro:not(.prox){background:color-mix(in srgb,var(--violeta-osc) 45%,transparent);color:#fff;border:2px solid rgba(255,255,255,.5);box-shadow:none;transform:none}
+.encuentro:not(.prox) > .cinta{display:none}
+.encuentro:not(.prox) .cuando{border-color:rgba(255,255,255,.35)}
+.encuentro:not(.prox) .cuando .dia{color:var(--rosa-cla)}
+.encuentro:not(.prox) .cuando .mes{color:#fff}
+.encuentro:not(.prox) .estado-e{background:rgba(255,255,255,.2);color:#fff;transform:none}
+.encuentro:not(.prox) .meet{background:rgba(255,255,255,.16)}
 .encuentro > .cinta{top:-14px;left:40px;transform:rotate(-4deg)}
 .encuentro:nth-child(even) > .cinta{left:auto;right:40px;transform:rotate(3deg)}
 .cuando{display:grid;gap:6px;align-content:start;border-right:2px dashed rgba(166,57,129,.3);padding-right:clamp(12px,2vw,24px)}
@@ -195,7 +201,7 @@ a.placa:hover{transform:rotate(0) scale(1.03)!important;box-shadow:0 20px 34px -
 .sumate{padding-block:clamp(64px,9vw,120px)}
 .sumate .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:start}
 .sumate .collage{margin-top:26px}
-form.contacto{position:relative;display:grid;gap:18px;background:var(--papel) url("/arrugado.jpg") center/1200px auto;padding:clamp(26px,3.4vw,40px) clamp(22px,3vw,36px) clamp(24px,3vw,32px);box-shadow:0 18px 34px -16px rgba(0,0,0,.45);transform:rotate(.6deg)}
+form.contacto{position:relative;display:grid;gap:18px;background:var(--papel);padding:clamp(26px,3.4vw,40px) clamp(22px,3vw,36px) clamp(24px,3vw,32px);box-shadow:0 18px 34px -16px rgba(0,0,0,.45);transform:rotate(.6deg)}
 form.contacto > .cinta{top:-14px;left:50%;margin-left:-55px;transform:rotate(-2deg)}
 form.contacto label{font-family:var(--f-display);font-weight:800;font-size:.86rem;letter-spacing:.07em;text-transform:uppercase;color:var(--violeta);display:grid;gap:4px}
 form.contacto input,form.contacto textarea,form.contacto select{font-family:var(--f-texto);font-size:1rem;letter-spacing:0;text-transform:none;font-weight:400;padding:.55em .2em;border:0;border-bottom:2px solid var(--violeta);border-radius:0;background:transparent;color:var(--tinta);width:100%;transition:border-color .15s,background .15s}
