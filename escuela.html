@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Escuela de verano 2027 · REDINSEX</title>
-<meta name="description" content="Escuela de verano 2027 de la REDINSEX en Mar del Plata: Estudios sociales sobre las diversidades y disidencias sexo-genéricas. 1 al 3 de marzo, Facultad de Humanidades.">
+<meta name="description" content="Escuela de verano 2027 de la REDINSEX en Mar del Plata: Estudios sociales sobre las diversidades y disidencias sexo-genéricas. 1 al 3 de marzo, Facultad de Humanidades, UNMdP.">
 <link rel="icon" href="isotipo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@900&family=Archivo+Black&family=DM+Serif+Display:ital@0;1&family=Courier+Prime:wght@700&display=swap">
@@ -300,24 +300,26 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
 .fichas .org li{font-weight:700;line-height:1.4;padding-left:14px;border-left:4px solid var(--violeta)}
 .fichas .org li span{display:block;font-weight:500;font-size:.9rem;color:#4a4450}
 @media (max-width:860px){.fichas{grid-template-columns:1fr}.fichas .org ul{grid-template-columns:1fr}}
-.escuela-intro{overflow:hidden}
-.escuela-intro .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(20px,4vw,48px);align-items:center}
-.polaroids{position:relative;width:430px;height:300px;margin:0;padding:0;list-style:none}
-.polaroid{position:absolute;width:172px;background:var(--papel);padding:9px 9px 34px;box-shadow:4px 4px 0 var(--tinta);margin:0}
+.escuela-intro{position:relative;z-index:2}
+.escuela-intro .wrap{position:relative}
+.polaroid{position:absolute;width:150px;background:var(--papel);padding:8px 8px 28px;margin:0;pointer-events:none;z-index:3}
 .polaroid img{display:block;width:100%;height:auto;aspect-ratio:1}
-.polaroid figcaption{font-family:"Courier Prime",monospace;font-weight:700;font-size:.9rem;color:var(--tinta);text-align:center;padding:9px 4px 11px;line-height:1.2}
-.polaroid:nth-child(1){left:0;top:46px;transform:rotate(-7deg);box-shadow:4px 4px 0 var(--rosa)}
-.polaroid:nth-child(2){left:128px;top:0;transform:rotate(3.5deg);z-index:2;box-shadow:4px 4px 0 var(--amarillo)}
-.polaroid:nth-child(3){left:256px;top:58px;transform:rotate(-2.5deg);box-shadow:4px 4px 0 var(--verde-cla)}
-.polaroid .cinta{width:74px;height:22px;top:-11px;left:50%;margin-left:-37px;transform:rotate(-4deg)}
-@media (max-width:980px){.escuela-intro .wrap{grid-template-columns:1fr}.polaroids{margin:6px auto 0}}
-@media (max-width:480px){.polaroids{width:330px;height:220px}.polaroid{width:128px;padding:7px 7px 26px}.polaroid figcaption{font-size:.74rem;padding:7px 2px 8px}.polaroid:nth-child(1){top:34px}.polaroid:nth-child(2){left:100px}.polaroid:nth-child(3){left:200px;top:44px}}
+.polaroid .cinta{width:68px;height:20px;top:-10px;left:50%;margin-left:-34px;transform:rotate(-4deg)}
+.pol-1{right:clamp(16px,8vw,120px);top:clamp(8px,2vw,24px);transform:rotate(6deg);box-shadow:4px 4px 0 var(--rosa)}
+.pol-2{right:clamp(150px,24vw,330px);bottom:-92px;transform:rotate(-5deg);box-shadow:4px 4px 0 var(--amarillo)}
+.pol-3{right:-26px;bottom:-58px;transform:rotate(4deg);box-shadow:4px 4px 0 var(--verde-cla);width:140px}
+.escuela .actas{margin-bottom:30px}
+@media (max-width:980px){.pol-1{display:none}.pol-2{right:16px;bottom:-70px;width:120px}}
+@media (max-width:600px){.pol-2{width:96px;padding:6px 6px 20px;bottom:-104px;right:12px}.pol-3{width:96px;padding:6px 6px 20px;right:-8px;bottom:-50px}.escuela-intro .franja{max-width:calc(100% - 70px)}}
+.fichas .logo-sede{display:block;height:46px;width:auto;margin:14px 0 0}
+.fichas .org li{display:grid;gap:8px;align-content:start}
+.fichas .org li img{height:56px;width:auto;max-width:100%}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="REDINSEX">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Escuela de verano 2027 · REDINSEX">
-<meta property="og:description" content="Escuela de verano 2027 de la REDINSEX en Mar del Plata: Estudios sociales sobre las diversidades y disidencias sexo-genéricas. 1 al 3 de marzo, Facultad de Humanidades.">
+<meta property="og:description" content="Escuela de verano 2027 de la REDINSEX en Mar del Plata: Estudios sociales sobre las diversidades y disidencias sexo-genéricas. 1 al 3 de marzo, Facultad de Humanidades, UNMdP.">
 <meta property="og:url" content="https://redinsex.ar/escuela.html">
 <meta property="og:image" content="https://redinsex.ar/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -357,15 +359,10 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
 <main id="inicio">
   <section class="congresos-intro escuela-intro">
     <div class="wrap">
-      <div>
-        <h1 class="titulo">Escuela de verano</h1>
-        <p class="franja"><span>Tres días de encuentro y formación en estudios sociales sobre diversidades y disidencias sexo-genéricas.</span></p>
-      </div>
-      <div class="polaroids" aria-hidden="true">
-        <figure class="polaroid"><img src="mardel-1.jpg" alt="" width="400" height="400"></figure>
-        <figure class="polaroid"><span class="cinta"></span><img src="mardel-2.jpg" alt="" width="400" height="400"></figure>
-        <figure class="polaroid"><img src="mardel-3.jpg" alt="" width="400" height="400"></figure>
-      </div>
+      <h1 class="titulo">Escuela de verano</h1>
+      <p class="franja"><span>Tres días de encuentro y formación en estudios sociales sobre diversidades y disidencias sexo-genéricas.</span></p>
+      <figure class="polaroid pol-1" aria-hidden="true"><img src="mardel-1.jpg" alt="" width="400" height="400"></figure>
+      <figure class="polaroid pol-2" aria-hidden="true"><span class="cinta"></span><img src="mardel-2.jpg" alt="" width="400" height="400"></figure>
     </div>
   </section>
 
@@ -380,7 +377,8 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
         </li>
         <li>
           <h3>Dónde</h3>
-          <p><span class="grande">Facultad de Humanidades</span>Mar del Plata.</p>
+          <p><span class="grande">Facultad de Humanidades, UNMdP</span>Universidad Nacional de Mar del Plata.</p>
+          <img class="logo-sede" src="logo-fh-unmdp.png" alt="Facultad de Humanidades, Universidad Nacional de Mar del Plata" width="439" height="120" loading="lazy">
         </li>
         <li>
           <h3>Para quiénes</h3>
@@ -389,12 +387,13 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
         <li class="org">
           <h3>Organizan</h3>
           <ul>
-            <li>Red Argentina de Investigadorxs en Diversidades y Disidencias Sexo-Genéricas <span>REDINSEX</span></li>
-            <li>Grupo de Estudios sobre Familia, Género y Subjetividades <span>Facultad de Humanidades</span></li>
+            <li><img src="logo.png" alt="" width="900" height="278" loading="lazy">Red Argentina de Investigadorxs en Diversidades y Disidencias Sexo-Genéricas <span>REDINSEX</span></li>
+            <li><img src="logo-gefgs.png" alt="" width="333" height="150" loading="lazy">Grupo de Estudios sobre Familia, Género y Subjetividades <span>Facultad de Humanidades, UNMdP</span></li>
           </ul>
         </li>
       </ul>
       <div class="actas">
+        <figure class="polaroid pol-3" aria-hidden="true"><img src="mardel-3.jpg" alt="" width="400" height="400"></figure>
         <span class="cinta" aria-hidden="true"></span><span class="cinta der" aria-hidden="true"></span>
         <h3 class="collage" aria-label="Próximamente, programa e inscripción"><span class="c1">Próxima</span><span class="c2">mente</span><span class="c3">PROGRAMA</span><span class="c6">e</span><span class="c4">inscripción</span></h3>
         <div>
