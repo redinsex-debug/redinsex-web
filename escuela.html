@@ -300,6 +300,18 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
 .fichas .org li{font-weight:700;line-height:1.4;padding-left:14px;border-left:4px solid var(--violeta)}
 .fichas .org li span{display:block;font-weight:500;font-size:.9rem;color:#4a4450}
 @media (max-width:860px){.fichas{grid-template-columns:1fr}.fichas .org ul{grid-template-columns:1fr}}
+.escuela-intro{overflow:hidden}
+.escuela-intro .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(20px,4vw,48px);align-items:center}
+.polaroids{position:relative;width:430px;height:300px;margin:0;padding:0;list-style:none}
+.polaroid{position:absolute;width:172px;background:var(--papel);padding:9px 9px 34px;box-shadow:4px 4px 0 var(--tinta);margin:0}
+.polaroid img{display:block;width:100%;height:auto;aspect-ratio:1}
+.polaroid figcaption{font-family:"Courier Prime",monospace;font-weight:700;font-size:.9rem;color:var(--tinta);text-align:center;padding:9px 4px 11px;line-height:1.2}
+.polaroid:nth-child(1){left:0;top:46px;transform:rotate(-7deg);box-shadow:4px 4px 0 var(--rosa)}
+.polaroid:nth-child(2){left:128px;top:0;transform:rotate(3.5deg);z-index:2;box-shadow:4px 4px 0 var(--amarillo)}
+.polaroid:nth-child(3){left:256px;top:58px;transform:rotate(-2.5deg);box-shadow:4px 4px 0 var(--verde-cla)}
+.polaroid .cinta{width:74px;height:22px;top:-11px;left:50%;margin-left:-37px;transform:rotate(-4deg)}
+@media (max-width:980px){.escuela-intro .wrap{grid-template-columns:1fr}.polaroids{margin:6px auto 0}}
+@media (max-width:480px){.polaroids{width:330px;height:220px}.polaroid{width:128px;padding:7px 7px 26px}.polaroid figcaption{font-size:.74rem;padding:7px 2px 8px}.polaroid:nth-child(1){top:34px}.polaroid:nth-child(2){left:100px}.polaroid:nth-child(3){left:200px;top:44px}}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="REDINSEX">
@@ -343,10 +355,17 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
 </header>
 
 <main id="inicio">
-  <section class="congresos-intro">
+  <section class="congresos-intro escuela-intro">
     <div class="wrap">
-      <h1 class="titulo">Escuela de verano</h1>
-      <p class="franja"><span>Tres días de encuentro y formación en estudios sociales sobre diversidades y disidencias sexo-genéricas.</span></p>
+      <div>
+        <h1 class="titulo">Escuela de verano</h1>
+        <p class="franja"><span>Tres días de encuentro y formación en estudios sociales sobre diversidades y disidencias sexo-genéricas.</span></p>
+      </div>
+      <div class="polaroids" aria-hidden="true">
+        <figure class="polaroid"><img src="mardel-1.jpg" alt="" width="400" height="400"></figure>
+        <figure class="polaroid"><span class="cinta"></span><img src="mardel-2.jpg" alt="" width="400" height="400"></figure>
+        <figure class="polaroid"><img src="mardel-3.jpg" alt="" width="400" height="400"></figure>
+      </div>
     </div>
   </section>
 
