@@ -67,6 +67,8 @@ p{margin:0}
 .btn.alt{background:var(--verde-cla);color:var(--tinta)}
 
 /* cabecera */
+html{scroll-padding-top:84px}
+@media (max-width:1020px){html{scroll-padding-top:74px}}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--violeta);color:#fff}
 header.top::after{content:"";position:absolute;left:0;right:0;top:100%;height:9px;background:var(--violeta);clip-path:polygon(0 0,100% 0,100% 30%,97.7% 21%,96.3% 24%,94.7% 16%,91.8% 34%,88.7% 23%,86.0% 53%,84.2% 1%,81.1% 40%,78.0% 49%,75.4% 2%,73.3% 10%,71.4% 13%,69.0% 42%,67.3% 3%,65.9% 50%,63.6% 18%,60.9% 20%,59.2% 35%,57.6% 23%,56.0% 55%,54.1% 26%,51.8% 15%,49.4% 3%,48.1% 45%,46.3% 9%,44.2% 33%,42.2% 28%,39.3% 49%,36.9% 50%,35.1% 30%,32.2% 51%,30.8% 26%,29.3% 28%,26.7% 33%,25.3% 48%,22.4% 40%,20.0% 17%,18.4% 44%,15.6% 46%,12.5% 12%,11.1% 9%,9.4% 30%,7.7% 42%,4.9% 50%,2.9% 4%,1.4% 22%,0.0% 13%);pointer-events:none}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:9px}
@@ -310,7 +312,7 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
 .pol-3{right:-26px;bottom:-58px;transform:rotate(4deg);box-shadow:4px 4px 0 var(--verde-cla);width:140px}
 .escuela .actas{margin-bottom:30px}
 @media (max-width:980px){.pol-1{display:none}.pol-2{right:16px;bottom:-70px;width:120px}}
-@media (max-width:600px){.pol-2{width:96px;padding:6px 6px 20px;bottom:-104px;right:12px}.pol-3{width:96px;padding:6px 6px 20px;right:-8px;bottom:-50px}.escuela-intro .franja{max-width:calc(100% - 70px)}}
+@media (max-width:600px){.escuela-intro{padding-bottom:150px}.pol-2{width:96px;padding:6px 6px 18px;bottom:-132px;right:22px}.pol-3{width:96px;padding:6px 6px 20px;right:-8px;bottom:-50px}.escuela-intro .franja{max-width:calc(100% - 70px)}}
 .fichas .logo-sede{display:block;height:46px;width:auto;margin:14px 0 0}
 .fichas .org li{display:grid;gap:8px;align-content:start}
 .fichas .org li img{height:56px;width:auto;max-width:100%}
@@ -329,7 +331,7 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="index.html#inicio"><img src="logo.png" alt="REDINSEX" width="900" height="278"></a>
+    <a class="logo" href="index.html"><img src="logo.png" alt="REDINSEX" width="900" height="278"></a>
     <nav class="menu" aria-label="Principal">
       <ul>
         <li><a href="index.html#la-red">La red</a></li>
@@ -412,7 +414,7 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
     <ul class="redes"><li><a href="https://www.instagram.com/redinsexargentina/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg><span>Instagram</span></a></li><li><a href="https://www.youtube.com/@REDINSEX" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg><span>YouTube</span></a></li><li><a href="https://www.linkedin.com/in/redinsex-redinsex-933908356/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg><span>LinkedIn</span></a></li></ul>
   </div>
 </footer>
-<aside aria-label="Volver arriba"><a class="arriba" href="#inicio" aria-label="Volver arriba">↑</a></aside>
+<aside aria-label="Volver arriba"><a class="arriba" href="#top" aria-label="Volver arriba">↑</a></aside>
 <script>
 (function(){var a=document.querySelector('.arriba');if(!a)return;function f(){a.classList.toggle('ver',window.scrollY>900);}window.addEventListener('scroll',f,{passive:true});f();})();
 </script>
