@@ -289,6 +289,14 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
 .trama{position:absolute;pointer-events:none;border-radius:50%;background:radial-gradient(circle,var(--c,#f6679e) 34%,transparent 36%) 0 0/12px 12px;z-index:0}
 .hero .wrap{position:relative;z-index:1}
 @media (max-width:860px){.hero .trama{opacity:.45}}
+.canal{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;margin-top:clamp(8px,1.5vw,16px);padding-top:clamp(20px,2.5vw,28px);border-top:2px dashed rgba(255,255,255,.4)}
+.canal p{margin:0;font-weight:700;font-size:1.05rem;max-width:46ch}
+.btn.yt{background:var(--amarillo);color:var(--tinta);box-shadow:4px 4px 0 var(--tinta)}
+.btn.yt:hover{box-shadow:6px 6px 0 var(--tinta)}
+a.meet{text-decoration:none;transition:background .15s,color .15s}
+.encuentro:not(.prox) a.meet.video{background:var(--amarillo);color:var(--tinta)}
+.encuentro a.meet.video i{width:0;height:0;border-radius:0;background:none;border-style:solid;border-width:5px 0 5px 9px;border-color:transparent transparent transparent currentColor}
+.encuentro a.meet.video:hover{background:#fff}
 .escuela .sub{max-width:60ch}
 .fichas{list-style:none;margin:clamp(30px,4vw,44px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,22px)}
 .fichas > li{background:var(--papel) url("arrugado.jpg") center/1200px auto;color:var(--tinta);padding:18px 20px 22px;box-shadow:5px 5px 0 var(--rosa);min-width:0}

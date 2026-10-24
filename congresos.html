@@ -289,6 +289,14 @@ form.contacto{box-shadow:7px 7px 0 var(--violeta);transform:none}
 .trama{position:absolute;pointer-events:none;border-radius:50%;background:radial-gradient(circle,var(--c,#f6679e) 34%,transparent 36%) 0 0/12px 12px;z-index:0}
 .hero .wrap{position:relative;z-index:1}
 @media (max-width:860px){.hero .trama{opacity:.45}}
+.canal{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;margin-top:clamp(8px,1.5vw,16px);padding-top:clamp(20px,2.5vw,28px);border-top:2px dashed rgba(255,255,255,.4)}
+.canal p{margin:0;font-weight:700;font-size:1.05rem;max-width:46ch}
+.btn.yt{background:var(--amarillo);color:var(--tinta);box-shadow:4px 4px 0 var(--tinta)}
+.btn.yt:hover{box-shadow:6px 6px 0 var(--tinta)}
+a.meet{text-decoration:none;transition:background .15s,color .15s}
+.encuentro:not(.prox) a.meet.video{background:var(--amarillo);color:var(--tinta)}
+.encuentro a.meet.video i{width:0;height:0;border-radius:0;background:none;border-style:solid;border-width:5px 0 5px 9px;border-color:transparent transparent transparent currentColor}
+.encuentro a.meet.video:hover{background:#fff}
 .nota-relato{position:relative;background:var(--papel) url("arrugado.jpg") center/1200px auto;color:var(--tinta);margin-top:clamp(34px,4.5vw,52px);padding:clamp(24px,3.4vw,40px) clamp(22px,3.6vw,44px);box-shadow:7px 7px 0 var(--amarillo);column-count:2;column-gap:clamp(28px,4vw,48px);column-rule:2px dashed rgba(166,57,129,.25)}
 .nota-relato .cinta{top:-14px;left:36px;transform:rotate(-5deg)}
 .nota-relato .cinta.der{left:auto;right:36px;transform:rotate(4deg)}
