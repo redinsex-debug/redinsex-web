@@ -324,6 +324,40 @@ a.meet{text-decoration:none;transition:background .15s,color .15s}
 .fichas .logo-sede{display:block;height:46px;width:auto;margin:14px 0 0}
 .fichas .org li{display:grid;gap:8px;align-content:start}
 .fichas .org li img{height:56px;width:auto;max-width:100%}
+/* programa */
+.programa{margin-top:clamp(40px,6vw,74px)}
+.prog-cab .eyebrow{color:#fff;opacity:.92}
+.prog-cab h3{font-family:var(--f-display);font-weight:800;text-transform:uppercase;color:#fff;font-size:clamp(1.55rem,3.4vw,2.4rem);letter-spacing:.04em;margin:.25em 0 0;text-wrap:balance}
+.prog-intro{color:#fff;font-weight:500;line-height:1.6;max-width:64ch;margin:14px 0 0}
+.objetivos{list-style:none;margin:clamp(22px,3vw,30px) 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 30px}
+.objetivos li{color:#fff;font-weight:500;line-height:1.5;padding-left:22px;position:relative}
+.objetivos li::before{content:"";position:absolute;left:0;top:.45em;width:11px;height:11px;background:var(--amarillo)}
+.objetivos li:nth-child(2)::before{background:var(--rosa-cla)}
+.objetivos li:nth-child(3)::before{background:var(--verde-cla)}
+.objetivos li:nth-child(4)::before{background:#fff}
+.dias{display:grid;gap:clamp(30px,4vw,48px);margin-top:clamp(34px,4.6vw,56px)}
+.dia-cab{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;margin:0 0 clamp(16px,2vw,22px);color:#fff;font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(1.15rem,2.2vw,1.5rem)}
+.dia-cab .num{background:var(--amarillo);color:var(--tinta);font-size:.68em;padding:.2em .55em;transform:rotate(-2deg)}
+.dia:nth-child(2) .dia-cab .num{background:var(--rosa-cla)}
+.dia:nth-child(3) .dia-cab .num{background:var(--verde-cla)}
+.modulos{list-style:none;margin:0;padding:0;display:grid;gap:clamp(14px,2.2vw,22px)}
+.modulo{display:grid;grid-template-columns:minmax(0,116px) minmax(0,1fr);gap:clamp(12px,2.6vw,28px);background:var(--papel) url("arrugado.jpg") center/1200px auto;color:var(--tinta);padding:clamp(18px,2.6vw,26px) clamp(18px,2.9vw,30px);box-shadow:5px 5px 0 var(--rosa)}
+.modulo:nth-child(2){box-shadow:5px 5px 0 var(--amarillo);background-position:60% 30%}
+.modulo:nth-child(3){box-shadow:5px 5px 0 var(--verde-cla);background-position:20% 70%}
+.modulo .hora{margin:0;font-family:var(--f-display);font-weight:800;color:var(--violeta);font-size:clamp(1.3rem,2vw,1.55rem);line-height:1.05;letter-spacing:.01em}
+.modulo .hora span{display:block;font-family:var(--f-texto);font-weight:700;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--violeta-osc);margin-top:5px}
+.mod-tit{font-family:var(--f-texto);font-weight:800;font-size:clamp(1.05rem,1.7vw,1.24rem);line-height:1.25;margin:0;color:var(--tinta);text-wrap:balance}
+.mod-quien{margin:8px 0 0;font-weight:600;color:var(--violeta-osc);line-height:1.4}
+.mod-cont{margin-top:12px;border-top:1px dashed rgba(109,31,86,.35);padding-top:11px}
+.mod-cont summary{font-family:var(--f-display);font-weight:800;font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--violeta-osc);cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.45em}
+.mod-cont summary::-webkit-details-marker{display:none}
+.mod-cont summary::after{content:"+";font-size:1.2em;line-height:1}
+.mod-cont[open] summary::after{content:"\2013"}
+.mod-cont summary:focus-visible{outline:2px solid var(--violeta);outline-offset:3px}
+.mod-cont p{margin:10px 0 0;line-height:1.55;color:#2a2630;font-size:.96rem}
+.inscripcion > div{display:flex;flex-wrap:wrap;gap:12px}
+.inscripcion > div p{flex:1 1 100%;margin:0 0 6px}
+@media (max-width:620px){.objetivos{grid-template-columns:1fr}.modulo{grid-template-columns:1fr;gap:6px}}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="REDINSEX">
@@ -402,13 +436,101 @@ a.meet{text-decoration:none;transition:background .15s,color .15s}
           </ul>
         </li>
       </ul>
-      <div class="actas">
+      <div class="programa">
+        <div class="prog-cab">
+          <span class="eyebrow">El programa</span>
+          <h3>Tres días, siete módulos</h3>
+          <p class="prog-intro">Una formación introductoria a cargo de integrantes de la REDINSEX de distintas disciplinas de las ciencias sociales y humanas. Cada módulo dura dos horas y la Facultad de Humanidades de la UNMdP otorga reconocimiento académico a quienes participen.</p>
+          <ul class="objetivos">
+            <li>Introducir en las principales problemáticas y debates del campo de los estudios sociales sobre diversidades y disidencias sexo-genéricas.</li>
+            <li>Promover el análisis crítico de los marcos conceptuales, recursos argumentativos y metodologías que circulan en el campo.</li>
+            <li>Explicitar las vinculaciones entre este campo y el de los estudios transfeministas y de género.</li>
+            <li>Favorecer el intercambio entre saberes y prácticas de investigadorxs, activistas y funcionarixs.</li>
+          </ul>
+        </div>
+        <div class="dias">
+          <section class="dia">
+            <h4 class="dia-cab"><span class="num">Día 1</span> Lunes 1 de marzo</h4>
+            <ol class="modulos">
+              <li class="modulo">
+                <p class="hora">10–12<span>horas</span></p>
+                <div>
+                  <h5 class="mod-tit">Introducción a cuestiones de diversidad sexual en Ciencias Sociales y Humanidades</h5>
+                  <p class="mod-quien">Cecilia Malnis, Maximiliano Marentes y Cristian Darouiche</p>
+                  <details class="mod-cont"><summary>Contenidos</summary><p>Presentación del campo de los estudios sobre diversidad/disidencia sexual en las ciencias sociales en América Latina y, principalmente, argentina. Discusiones en torno a la sexualidad y la identidad de género. Los principales desafíos actuales de la investigación en ciencias sociales sobre diversidades/disidencias sexo-genéricas.</p></details>
+                </div>
+              </li>
+              <li class="modulo">
+                <p class="hora">14–16<span>horas</span></p>
+                <div>
+                  <h5 class="mod-tit">Debates en torno a la diversidad/disidencia sexual</h5>
+                  <p class="mod-quien">Eduardo Mattio y Pascual Scarpino</p>
+                  <details class="mod-cont"><summary>Contenidos</summary><p>La distinción entre diversidad y disidencia sexo-genérica: debates teóricos y políticos. Potencia tortillera: un nosotrxs lesbiano sexo-disidente frente a la ciudadanía sexual liberal. De la homosexualidad a la gaycidad. Más allá de la homonormatividad y la asimilación: las maricas en un escenario posgay. Demanda al Estado y ampliación de derechos: la lucha del colectivo travesti/trans en la Argentina reciente. El desafío de la nostredad.</p></details>
+                </div>
+              </li>
+              <li class="modulo">
+                <p class="hora">17–19<span>horas</span></p>
+                <div>
+                  <h5 class="mod-tit">Metodología en investigación en diversidad sexo-genérica</h5>
+                  <p class="mod-quien">Belén Alonso y Manuel Riveiro</p>
+                  <details class="mod-cont"><summary>Contenidos</summary><p>La metodología como proceso crítico de toma de decisiones, técnicas y políticas. Desde el positivismo hacia otras epistemologías. El proceso de investigación situado: coherencia entre los problemas de estudio de las diversidades sexo-genéricas, las teorías críticas y las estrategias metodológicas. Producción y análisis de datos e instrumentos desde la diversidad sexo-genérica. Comunicación e incidencia política.</p></details>
+                </div>
+              </li>
+            </ol>
+          </section>
+          <section class="dia">
+            <h4 class="dia-cab"><span class="num">Día 2</span> Martes 2 de marzo</h4>
+            <ol class="modulos">
+              <li class="modulo">
+                <p class="hora">10–12<span>horas</span></p>
+                <div>
+                  <h5 class="mod-tit">Género, diversidad y discurso</h5>
+                  <p class="mod-quien">Matías Soich</p>
+                  <details class="mod-cont"><summary>Contenidos</summary><p>La perspectiva del análisis del discurso: el lenguaje como práctica social. La construcción discursiva de representaciones, identidades y relaciones de género. Panorama histórico: desde el «habla masculina y femenina» hasta el lenguaje no binario. Discurso, género y poder: el orden social de los discursos y los lugares de enunciación del colectivo LGBTIQNb+.</p></details>
+                </div>
+              </li>
+              <li class="modulo">
+                <p class="hora">14–16<span>horas</span></p>
+                <div>
+                  <h5 class="mod-tit">Literatura y disidencias sexuales</h5>
+                  <p class="mod-quien">Joel Cuenca</p>
+                  <details class="mod-cont"><summary>Contenidos</summary><p>Literatura y sexualidades. Hitos estético-políticos. La sublevación de las voces de la disidencia sexual en la literatura argentina de los siglos XX y XXI. La literatura como dispositivo cultural y archivo de sentimientos. Emergencias estéticas en coyunturas políticas de pánico sexual. La literatura y la ESI: criterios de selección de textualidades.</p></details>
+                </div>
+              </li>
+              <li class="modulo">
+                <p class="hora">17–19<span>horas</span></p>
+                <div>
+                  <h5 class="mod-tit">Conceptos de género y sexualidad: genealogías, usos y debates epistemológicos</h5>
+                  <p class="mod-quien">Verónica Meske y Andrea Torricella</p>
+                  <details class="mod-cont"><summary>Contenidos</summary><p>Genealogías del concepto de género y disputas por sus usos analíticos. Del sistema sexo-género a la matriz heterosexual. La distinción entre sexualidad y género. Performatividad y materialidad. Usos de los conceptos de género y heteronormatividad desde perspectivas interseccionales y neomaterialistas.</p></details>
+                </div>
+              </li>
+            </ol>
+          </section>
+          <section class="dia">
+            <h4 class="dia-cab"><span class="num">Día 3</span> Miércoles 3 de marzo</h4>
+            <ol class="modulos">
+              <li class="modulo">
+                <p class="hora">10–12<span>horas</span></p>
+                <div>
+                  <h5 class="mod-tit">Hacia la salud integral de la población LGBTIQNb+</h5>
+                  <p class="mod-quien">Lorena Saletti</p>
+                  <details class="mod-cont"><summary>Contenidos</summary><p>Políticas públicas y derechos conquistados. Impacto de las desigualdades sociales, la discriminación y las violencias en los procesos de salud-enfermedad-atención. Barreras de acceso a los servicios de salud y desigualdades en la atención de la población LGBTIQNb+. Estrategias para una atención integral, accesible, respetuosa y libre de discriminación. Desafíos para garantizar el derecho a la salud integral.</p></details>
+                </div>
+              </li>
+            </ol>
+          </section>
+        </div>
+      </div>
+
+      <div class="actas inscripcion">
         <figure class="polaroid pol-3" aria-hidden="true"><img src="mardel-3.jpg" alt="" width="400" height="400"></figure>
         <span class="cinta" aria-hidden="true"></span><span class="cinta der" aria-hidden="true"></span>
-        <h3 class="collage" aria-label="Próximamente, programa e inscripción"><span class="c1">Próxima</span><span class="c2">mente</span><span class="c3">PROGRAMA</span><span class="c6">e</span><span class="c4">inscripción</span></h3>
+        <h3 class="collage" aria-label="Inscripción abierta"><span class="c1">Inscrip</span><span class="c2">ción</span><span class="c3">ABIERTA</span></h3>
         <div>
-          <p>Pronto vamos a publicar el programa completo y la forma de inscribirse. Las novedades salen primero en nuestro Instagram.</p>
-          <a class="btn" href="https://www.instagram.com/redinsexargentina/" target="_blank" rel="noopener">SEGUINOS EN INSTAGRAM →</a>
+          <p>Completá el formulario para inscribirte en la Escuela de verano. Las novedades también salen en nuestro Instagram.</p>
+          <a class="btn" href="https://forms.gle/V11VQ5S4kRDaoQr39" target="_blank" rel="noopener">INSCRIBITE →</a>
+          <a class="btn alt" href="https://www.instagram.com/redinsexargentina/" target="_blank" rel="noopener">INSTAGRAM</a>
         </div>
       </div>
     </div>
